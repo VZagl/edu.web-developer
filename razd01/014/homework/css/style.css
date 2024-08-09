@@ -1,0 +1,36 @@
+body {
+	font-family:
+		'times new roman',
+		palatino linotype,
+		athena,
+		tahoma;
+	font-size: 10pt;
+	color: rgb(0, 0, 0);
+	text-align: left;
+	margin-left: 20;
+	margin-right: 20;
+	margin-bottom: 3;
+	background-color: rgb(255, 255, 224);
+}
+
+h2 {
+	font-family:
+		'times new roman',
+		palatino linotype,
+		athena,
+		tahoma;
+	font-size: 12pt;
+	color: rgb(204, 0, 0);
+	font-weight: bold;
+	text-align: center;
+	margin-top: 30;
+	margin-bottom: 12;
+}
+
+.upper {
+	text-transform: uppercase;
+}
+
+.italic {
+	font-style: italic;
+}
