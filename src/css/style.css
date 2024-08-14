@@ -1,3 +1,8 @@
+/* `*` - универсальный селектор, который распространяет правило на все элементы на странице */
+* {
+	box-sizing: border-box;
+}
+
 p mark {
 	color: rgb(255, 99, 32, 0.7);
 }
@@ -28,6 +33,7 @@ h3 {
 }
 
 .box {
+	display: inline-block;
 	color: rgb(222, 111, 0);
 	background-color: rgb(55, 55, 55);
 	width: 300px;
@@ -40,4 +46,10 @@ h3 {
 	border-top-color: #00ff00;
 	padding: 20px;
 	margin: 50px;
+}
+
+.cover {
+	display: block;
+	width: 400px;
+	margin: 50px auto 0;
 }
