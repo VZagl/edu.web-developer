@@ -8,4 +8,5 @@ module.exports = {
 	tabWidth: 2,
 	useTabs: true,
 	// linebreakStyle: ['off', 'windows'],
+	plugins: ['prettier-plugin-organize-attributes', 'prettier-plugin-css-order'],
 };
