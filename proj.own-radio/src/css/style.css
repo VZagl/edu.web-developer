@@ -5,6 +5,7 @@
 }
 
 .container {
+	position: relative;
 	margin: 0 auto;
 	max-width: 1140px;
 }
@@ -52,6 +53,7 @@
 	width: 220px;
 	height: 7px;
 }
+
 /* ************************************************************************
 	promo
 */
@@ -167,6 +169,92 @@
 .intensive__descr {
 	margin-top: 15px;
 	color: #4a4a4a;
+	font-weight: 300;
+	font-size: 16px;
+	text-align: center;
+}
+
+/* ************************************************************************
+	info
+*/
+
+.info {
+	background-color: #0f0b0b;
+	padding: 100px 0 140px;
+	min-height: 564px;
+}
+
+.info__title {
+	color: #f9bf3b;
+	font-size: 30px;
+	text-align: right;
+}
+
+.info__text {
+	position: relative;
+	z-index: 2;
+	margin-top: 19px;
+	padding-left: 390px;
+	color: #ffffff;
+	font-weight: 300;
+	font-size: 16px;
+	text-align: right;
+}
+
+.info__text.medium {
+	font-weight: 500;
+}
+
+.info__img {
+	position: absolute;
+	top: 93px;
+	left: -83px;
+	z-index: 1;
+}
+
+/* ************************************************************************
+	skills
+*/
+
+.skills {
+	background: url('../img/secondary_bg.jpg') center center/cover repeat;
+	padding: 80px 0 102px;
+}
+
+.skills__title {
+	color: #efefef;
+	font-weight: 400;
+	font-size: 30px;
+}
+
+.skills .divider {
+	margin-top: 12px;
+}
+
+.skills__wrapper {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 40px;
+}
+
+.skills__item {
+	width: 224px;
+}
+
+.skills__round {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 auto;
+	border-radius: 100%;
+	background: #f9bf3b;
+	width: 118px;
+	height: 118px;
+}
+
+.skills_desc {
+	margin-top: 18px;
+	color: #efefef;
 	font-weight: 300;
 	font-size: 16px;
 	text-align: center;
