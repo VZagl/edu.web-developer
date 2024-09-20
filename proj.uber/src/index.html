@@ -21,11 +21,96 @@
 			crossorigin="anonymous"
 		/>
 		<link href="css/fonts.css" rel="stylesheet" />
-		<link href="css/style.css" rel="stylesheet" />
+
+		<!--	так как LiveServer не обновляет стили, подключенные с помощью:
+					`@import url('header.css');`
+					то приходится подключать каждый файл отдельно.
+		-->
+		<link href="css/common.css" rel="stylesheet" />
+		<link href="css/header.css" rel="stylesheet" />
+		<link href="css/promo.css" rel="stylesheet" />
+		<!-- <link href="css/style.css" rel="stylesheet" /> -->
 	</head>
 
 	<body>
-		<h1>Привет мир!</h1>
+		<!-- header -->
+		<header>
+			<nav>
+				<div class="container">
+					<ul class="menu">
+						<li class="menu_item"><a class="menu_link" href="#">Главная</a></li>
+						<li class="menu_item">
+							<a class="menu_link" href="#">Со своим автомобилем</a>
+						</li>
+						<li class="menu_item">
+							<a class="menu_link" href="#">На автомобиле компании</a>
+						</li>
+						<li class="menu_item">
+							<a class="menu_link" href="#">Требования</a>
+						</li>
+						<li class="menu_item">
+							<a class="menu_link" href="#">Контакты</a>
+						</li>
+						<li class="menu_item">
+							<a class="menu_link" href="#">Оставить заявку</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			<div class="subheader">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-4 offset-md-1">
+							<a class="subheader_logo" href="#">
+								<img src="icons/logo.png" alt="logo" />
+							</a>
+							<div class="subheader_official">
+								Официальный партнер Uber в Москве
+							</div>
+						</div>
+						<div class="col-md-2 offset-md-2">
+							<div class="subheader_call">Звоните нам ежедневно</div>
+							<a class="subheader_phone" href="tel:84957970988"
+								>8 495 797 09 88</a
+							>
+						</div>
+						<div class="col-md-2">
+							<button class="subheader_btn">заказать звонок</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</header>
+
+		<!-- section: promo -->
+		<section class="promo">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 offset-md-1">
+						<h1 class="promo_header">КОМПАНИЯ UBER PARTNERS!</h1>
+						<h2 class="promo_subheader">
+							ПРИГЛАШАЕМ ВОДИТЕЛЕЙ! НА СВОЕМ АВТО!
+						</h2>
+						<div class="promo_descr">
+							Компания UBER динамически развивающаяся. Компания на рынке
+							занимает лидирующее место среди таксомоторных компаний, Компания
+							абсолютно прозрачная вы можете контролировать все процессы у себя
+							в личном кабинете. Бонуcная система.Помимо выполненной работы по
+							заказам, компания начисляет бонусы за пиковое время.
+							<br /><br />
+							Мы одни из партнеров и зарекомендовали себя как одна из лучших
+							команд в городе Москве. Водители у нас зарабатывают от 80000-
+							120000 в месяц.
+						</div>
+						<button class="promo_btn">ОТПРАВИТЬ ЗАЯВКУ!</button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- section: -->
+		<!-- section: -->
+		<!-- section: -->
 
 		<!-- js -->
 		<script
