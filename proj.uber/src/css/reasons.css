@@ -34,7 +34,8 @@
 	/* flex-wrap: nowrap; */
 	justify-content: flex-start;
 	align-items: center;
-	margin-top: 16px;
+	padding-top: 16px;
+	height: 100%;
 }
 
 .reasons .reasons_round {
@@ -57,8 +58,9 @@
 }
 
 .reasons .reasons_descr {
-	margin-right: 70px;
 	/* width: 371px; */
+	align-self: flex-start;
+	margin-right: 70px;
 }
 
 .reasons .reasons_subtitle {
