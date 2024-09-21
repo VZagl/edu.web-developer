@@ -2,8 +2,15 @@ header {
 	position: relative;
 }
 
+.nav_block {
+	height: 50px;
+}
+
 nav {
+	position: fixed;
+	z-index: 2;
 	background-color: #212121;
+	width: 100%;
 }
 
 .menu {
