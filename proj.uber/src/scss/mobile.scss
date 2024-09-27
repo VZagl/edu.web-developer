@@ -1,0 +1,66 @@
+.mobile {
+	background-color: #fff;
+	background: url('../img/bg/mobile_app.png') center center/cover no-repeat;
+	padding: 48px 0 79px;
+	min-height: 864px;
+
+	.label {
+		background-color: #000;
+		color: #fff;
+	}
+
+	.title {
+		margin-top: 33px;
+		color: #000;
+	}
+
+	.subtitle {
+		margin-top: 1px;
+	}
+
+	.row {
+		margin-top: 11px;
+	}
+
+	&_item {
+		position: relative;
+		margin: 19px auto 0;
+		padding-top: 92px;
+		width: 320px;
+		height: 280px;
+		@for $i from 1 through 6 {
+			&_#{$i} {
+				background: url('../img/bg/mobile_screen_#{$i}.jpg')
+					center
+					center/cover
+					no-repeat;
+			}
+		}
+
+		&_subtitle {
+			color: #ffffff;
+			font-weight: 400;
+			font-size: 24px;
+			line-height: 31px;
+			text-align: center;
+			text-transform: uppercase;
+		}
+
+		&_plus {
+			display: flex;
+			position: absolute;
+			bottom: 35px;
+			left: 50%;
+			justify-content: center;
+			align-items: center;
+			transform: translateX(-50%);
+			cursor: pointer;
+			margin: 0 auto;
+			border-radius: 100%;
+			background-color: #000000;
+			padding: 7px;
+			width: 29px;
+			height: 29px;
+		}
+	}
+}
