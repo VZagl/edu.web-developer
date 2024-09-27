@@ -39,7 +39,11 @@
 		box-shadow: inset 0 -4px 0 rgba(0, 0, 0, 0.12);
 		border: none;
 		border-radius: 4px;
-		background-image: linear-gradient(to top, #1eacc7 0%, #4ce2ff 100%);
+		background-image: linear-gradient(
+			to top,
+			$color_aqua_1 0%,
+			$color_aqua_2 100%
+		);
 		width: 259px;
 		height: 63px;
 		color: #ffffff;
