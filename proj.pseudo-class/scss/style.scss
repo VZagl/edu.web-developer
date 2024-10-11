@@ -1,12 +1,26 @@
 * {
 	box-sizing: border-box;
 }
+
 button {
+	transition: 0.5s all;
 	cursor: pointer;
+	outline: none;
 	border: none;
 	background-color: #ffe66b;
 	width: 250px;
 	height: 50px;
+
+	&:hover {
+		background-color: pink;
+		color: white;
+	}
+	&:active {
+		background-color: orange;
+	}
+	&:focus {
+		background-color: grey;
+	}
 }
 
 .circle {
@@ -15,4 +29,24 @@ button {
 	background-color: green;
 	width: 50px;
 	height: 50px;
+
+	&:nth-child(2n) {
+		background-color: red;
+	}
+	&:nth-child(1) {
+		background-color: skyblue;
+	}
+	&::before {
+		display: block;
+		transition: 0.5s;
+		background-color: black;
+		width: 0%;
+		height: 2px;
+		content: '';
+	}
+	&:hover {
+		&::before {
+			width: 100%;
+		}
+	}
 }
