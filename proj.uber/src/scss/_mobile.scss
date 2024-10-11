@@ -58,9 +58,34 @@
 			margin: 0 auto;
 			border-radius: 100%;
 			background-color: #000000;
-			padding: 7px;
-			width: 29px;
-			height: 29px;
+			width: 26px;
+			height: 26px;
+
+			&::before {
+				display: block;
+				transition: 0.3s all;
+				background-color: $color_aqua_1;
+				width: 14px;
+				height: 2px;
+				content: '';
+			}
+			&::after {
+				display: block;
+				position: absolute;
+				left: 50%;
+				transform: translateX(-50%);
+				transition: 0.3s all;
+				background-color: $color_aqua_1;
+				width: 2px;
+				height: 14px;
+				content: '';
+			}
+			&:hover {
+				&::before,
+				&::after {
+					background-color: $color_light_red;
+				}
+			}
 		}
 	}
 }

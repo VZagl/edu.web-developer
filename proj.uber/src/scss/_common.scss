@@ -1,3 +1,10 @@
+@mixin btn_hover {
+	&:hover {
+		background-image: none;
+		background-color: $color_aqua_1;
+	}
+}
+
 * {
 	font-family: 'Roboto', sans-serif;
 }
