@@ -1,0 +1,41 @@
+.world {
+	position: relative;
+	background: url('../img/bg/map.jpg') center center/cover no-repeat;
+	padding: 48px 0 48px;
+	min-height: 717px;
+
+	.label {
+		width: 75px;
+		height: 25px;
+	}
+
+	.title {
+		margin-top: 26px;
+	}
+
+	.subtitle {
+		margin-top: 2px;
+	}
+
+	&_link {
+		display: block;
+		position: absolute;
+		bottom: 48px;
+		left: 50%;
+		transform: translateX(-50%);
+		// width: 223px;
+		// height: 68px;
+		color: #1fbad6;
+		// font-style: normal;
+		font-weight: 400;
+		font-size: 15px;
+		line-height: 68px;
+		text-align: center;
+		text-transform: uppercase;
+
+		&:hover {
+			color: #fff;
+			text-decoration: none;
+		}
+	}
+}
