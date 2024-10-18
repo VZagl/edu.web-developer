@@ -43,7 +43,8 @@ footer {
 				width: 32px;
 				height: 32px;
 
-				i {
+				i,
+				span::before {
 					color: #fff;
 				}
 			}
@@ -95,8 +96,8 @@ footer {
 			display: flex;
 			justify-content: flex-end;
 
-			&:nth-child(n) > :not(:last-child) {
-				margin-right: 6px;
+			&:nth-child(n) > :not(:first-child) {
+				margin-left: 6px;
 			}
 		}
 	}
