@@ -1,3 +1,5 @@
 node_modules
 .DS_Store
 /proj.uber/src/css
+/proj.adaptive/css
+/proj.sass/css
