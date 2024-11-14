@@ -1,7 +1,10 @@
-@import 'colors';
 @import 'fonts';
 @import 'fonts-icomoon';
+
+@import 'variables';
+@import 'mixins';
 @import 'common';
+
 @import 'header';
 @import 'promo';
 @import 'reasons';
@@ -10,3 +13,5 @@
 @import 'require';
 @import 'world';
 @import 'footer';
+
+@import 'media';

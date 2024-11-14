@@ -1,15 +1,10 @@
-@mixin btn_hover {
-	&:hover {
-		background-image: none;
-		background-color: $color_aqua_1;
-	}
-}
-
 * {
 	font-family: 'Roboto', sans-serif;
 }
 
 .label {
+	position: relative;
+	z-index: 2;
 	margin: 0 auto;
 	background-color: #000000;
 	padding: 5px 12px;
@@ -25,7 +20,6 @@
 		background-color: #ffffff;
 		color: #000000;
 	}
-
 	&_black {
 		background-color: #000000;
 		color: #ffffff;
@@ -33,6 +27,8 @@
 }
 
 .title {
+	position: relative;
+	z-index: 2;
 	margin-top: 38px;
 	margin-bottom: 0;
 	color: #222222;
@@ -45,13 +41,14 @@
 	&_white {
 		color: #ffffff;
 	}
-
 	&_black {
 		color: #000000;
 	}
 }
 
 .subtitle {
+	position: relative;
+	z-index: 2;
 	margin-top: 19px;
 	color: #222222;
 	font-weight: 400;
@@ -61,7 +58,6 @@
 	&_white {
 		color: #ffffff;
 	}
-
 	&_black {
 		color: #000000;
 	}

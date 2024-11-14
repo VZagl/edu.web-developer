@@ -6,29 +6,25 @@
 		background-color: #000000;
 		color: #ffffff;
 	}
-
 	.title {
 		color: #222222;
 	}
-
 	&_block {
 		display: flex;
 		flex-flow: row nowrap;
 		justify-content: flex-start;
-		align-items: center;
+		align-items: flex-start;
 		padding-top: 16px;
 		height: 100%;
 	}
-
 	&_round {
 		display: flex;
-		justify-content: center;
+		justify-content: flex-start;
 		align-items: center;
 		margin-right: 25px;
 		border-radius: 100%;
 		background: $color_aqua_1;
 	}
-
 	&_img_block {
 		display: flex;
 		justify-content: center;
@@ -36,19 +32,17 @@
 		width: 116px;
 		height: 116px;
 	}
-
 	&_descr {
 		align-self: flex-start;
 		margin-right: 70px;
+		width: 100%;
 	}
-
 	&_subtitle {
 		color: $color_aqua_1;
 		font-weight: 400;
 		font-size: 17px;
 		line-height: 21px;
 	}
-
 	&_text {
 		color: #202020;
 		font-weight: 300;
