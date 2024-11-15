@@ -3,7 +3,7 @@
 
 @import 'variables';
 @import 'mixins';
-@import 'common';
+@import 'common_first';
 
 @import 'header';
 @import 'promo';
@@ -14,4 +14,5 @@
 @import 'world';
 @import 'footer';
 
+@import 'common_last';
 @import 'media';
