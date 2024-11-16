@@ -2,11 +2,11 @@
 	* {
 		--debug-max-width: 'sm = 576..767';
 	}
-	// .nav {
-	// &_block {
-	// display: none;
-	// }
-	// }
+
+	.title {
+		margin-top: 25px;
+	}
+
 	.menu {
 		position: fixed;
 		top: 0;
@@ -32,15 +32,19 @@
 			font-size: 20px;
 		}
 	}
+
 	.hamburger {
 		display: block;
 	}
+
 	.xs-hidden {
 		display: none;
 	}
+
 	.xs-visible {
 		display: block;
 	}
+
 	.subheader {
 		&_phone {
 			display: block;
@@ -59,9 +63,41 @@
 			height: 40px;
 		}
 	}
+
 	.promo {
 		&_header {
 			line-height: 45px;
 		}
+	}
+
+	.reasons {
+		padding: 40px 0;
+
+		&_descr {
+			// width: 350px;
+		}
+		&_subtitle {
+			text-align: center;
+		}
+		&_text {
+			margin-top: 10px;
+		}
+	}
+
+	.mobile {
+		padding: 40px 0;
+	}
+
+	.choice {
+		padding: 40px 0;
+		min-height: 600px;
+	}
+
+	.require {
+		padding: 40px 0;
+	}
+
+	.world {
+		min-height: 450px;
 	}
 }

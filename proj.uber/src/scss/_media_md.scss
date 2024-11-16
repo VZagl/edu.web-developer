@@ -11,6 +11,7 @@
 			font-size: 10px;
 		}
 	}
+
 	.subheader {
 		&_logo {
 			img {
@@ -29,6 +30,7 @@
 			height: 40px;
 		}
 	}
+
 	.promo {
 		&_header {
 			font-size: 40px;
@@ -37,6 +39,7 @@
 			font-size: 30px;
 		}
 	}
+
 	.reasons {
 		&_block {
 			flex-direction: column;
@@ -48,6 +51,38 @@
 		&_descr {
 			// width: 300px;
 			margin: 20px 0 0;
+		}
+	}
+
+	.choice {
+		min-height: 800px;
+
+		&_img {
+			width: 100%;
+		}
+	}
+
+	.world {
+		min-height: 650px;
+	}
+
+	.footer {
+		&_wrapper {
+			flex-wrap: wrap;
+		}
+		&_wrapper > div {
+			display: flex;
+			justify-content: center;
+			margin-bottom: 20px;
+			width: 100%;
+
+			&:nth-child(1) {
+				width: 100%;
+			}
+			&:nth-child(3) {
+				justify-content: center;
+				width: 100%;
+			}
 		}
 	}
 }
