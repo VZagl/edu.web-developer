@@ -1,0 +1,31 @@
+* {
+	box-sizing: border-box;
+	font-size: 35px;
+}
+
+:root {
+	/* --color-light: 123px; */
+	--color-dark: blue;
+}
+
+@property --color-light {
+	syntax: '<color>';
+	inherits: false;
+	initial-value: lightblue;
+}
+
+.wrapper {
+	--color-dark: darkblue;
+}
+
+.element1 {
+	color: var(--color-dark, var(--color-light, red));
+}
+
+.element2 {
+	color: var(--color-dark-1, var(--color-light, red));
+}
+
+.element3 {
+	color: var(--color-dark-1, var(--color-light-1, red));
+}
