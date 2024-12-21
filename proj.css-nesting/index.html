@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<title>Project: CSS nesting</title>
+
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<!-- * -->
+
+		<div class="parent">
+			<div class="child">.child <span>span</span> !</div>
+			<div class="child parent">.child .parent</div>
+			<div class="parent child">.parent .child</div>
+			<div class="parent-child">.parent-child</div>
+			<div class="parent-yellow">.parent &-yellow</div>
+		</div>
+
+		<!-- * -->
+	</body>
+</html>

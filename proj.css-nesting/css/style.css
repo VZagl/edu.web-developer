@@ -1,0 +1,28 @@
+* {
+	box-sizing: border-box;
+	font-size: 35px;
+}
+
+.parent {
+	color: red;
+
+	.child {
+		color: green;
+
+		span {
+			color: pink;
+		}
+	}
+
+	&.child {
+		color: blue;
+	}
+
+	.parent-child {
+		color: gray;
+	}
+
+	&-yellow {
+		color: yellow;
+	}
+}
