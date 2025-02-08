@@ -1,6 +1,11 @@
 node_modules
 .DS_Store
+/_konsp/**/0.md
 /proj.uber/src/css
 /proj.adaptive/css
 /proj.sass/css
-/_konsp/**/0.md
+/proj.monovision-studio/src/css
+
+/**/*.~
+
+/yarn.lock
