@@ -45,6 +45,15 @@ html {
 	padding: 0 var(--container-padding-inline);
 }
 
+.title {
+	color: var(--dark-color, #221f20);
+	font-style: normal;
+	font-weight: 400;
+	font-size: 40px;
+	line-height: normal;
+	text-align: center;
+}
+
 .btn {
 	display: flex;
 	justify-content: center;
