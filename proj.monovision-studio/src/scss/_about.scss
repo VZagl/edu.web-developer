@@ -34,16 +34,34 @@
 			ul {
 				margin-top: 20px;
 				padding: 0;
-			}
 
-			li {
-				margin-top: 10px;
-				color: var(--dark-color, #221f20);
-				font-style: normal;
-				font-weight: 400;
-				font-size: 16px;
-				line-height: normal;
-				list-style-type: none;
+				li {
+					position: relative;
+					margin-top: 10px;
+					color: var(--dark-color, #221f20);
+					font-style: normal;
+					font-weight: 400;
+					font-size: 16px;
+					line-height: normal;
+					list-style-type: none;
+
+					&:before {
+						position: absolute;
+						top: 2px;
+						left: -30px;
+						width: 15px;
+						height: 15px;
+						content: '';
+					}
+					&:first-child::before {
+						// &:nth-child(1)::before {
+						background: url('../icons/camera.svg') center center/cover no-repeat;
+					}
+					&:last-child::before {
+						// &:nth-child(3)::before {
+						background: url('../icons/edit.svg') center center/cover no-repeat;
+					}
+				}
 			}
 		}
 

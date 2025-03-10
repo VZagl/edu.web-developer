@@ -45,13 +45,34 @@ html {
 	padding: 0 var(--container-padding-inline);
 }
 
+::selection {
+	background-color: rgba($color: #000000, $alpha: 0.8);
+	color: white;
+}
+
 .title {
+	margin: 0 auto;
 	color: var(--dark-color, #221f20);
 	font-style: normal;
 	font-weight: 400;
 	font-size: 40px;
 	line-height: normal;
 	text-align: center;
+
+	span {
+		position: relative;
+
+		&::after {
+			display: block;
+			position: absolute;
+			right: 0;
+			bottom: -1px;
+			background-color: #000;
+			width: 75px;
+			height: 2px;
+			content: '';
+		}
+	}
 }
 
 .btn {
