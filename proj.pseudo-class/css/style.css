@@ -25,6 +25,17 @@ button:focus {
   background-color: grey;
 }
 
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
 .circle {
   margin-top: 10px;
   border-radius: 100%;
@@ -38,6 +49,13 @@ button:focus {
 .circle:nth-child(1) {
   background-color: skyblue;
 }
+.circle::after {
+  display: block;
+  background-color: black;
+  width: 50%;
+  height: 4px;
+  content: "";
+}
 .circle::before {
   display: block;
   -webkit-transition: 0.5s;
@@ -49,4 +67,23 @@ button:focus {
 }
 .circle:hover::before {
   width: 100%;
+}
+
+p::first-line {
+  color: pink;
+}
+
+p::first-letter {
+  color: red;
+  font-size: 34px;
+}
+
+p::-moz-selection {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+}
+
+p::selection {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
 }/*# sourceMappingURL=style.css.map */

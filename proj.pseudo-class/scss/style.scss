@@ -24,6 +24,12 @@ button {
 	}
 }
 
+.wrapper {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+}
+
 .circle {
 	margin-top: 10px;
 	border-radius: 100%;
@@ -36,6 +42,14 @@ button {
 	}
 	&:nth-child(1) {
 		background-color: skyblue;
+	}
+
+	&::after {
+		display: block;
+		background-color: black;
+		width: 50%;
+		height: 4px;
+		content: '';
 	}
 	&::before {
 		display: block;
@@ -50,4 +64,18 @@ button {
 			width: 100%;
 		}
 	}
+}
+
+p::first-line {
+	color: pink;
+}
+
+p::first-letter {
+	color: red;
+	font-size: 34px;
+}
+
+p::selection {
+	background-color: rgba($color: #000000, $alpha: 0.8);
+	color: white;
 }
