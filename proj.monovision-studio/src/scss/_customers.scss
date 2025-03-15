@@ -1,0 +1,19 @@
+.customers {
+	background-color: var(--light-color);
+	padding: 80px 0 100px;
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: left;
+		gap: 30px;
+		margin-top: 53px;
+
+		img {
+			box-shadow: 7px 7px 12px 0px rgba(0, 0, 0, 0.25);
+			width: calc((100% - 90px) / 4);
+			// width: 333px;
+			// height: 250px;
+		}
+	}
+}
