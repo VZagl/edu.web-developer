@@ -4,7 +4,6 @@ node_modules
 /proj.uber/src/css
 /proj.adaptive/css
 /proj.sass/css
-/proj.monovision-studio/src/css
 
 /**/*.~
 
