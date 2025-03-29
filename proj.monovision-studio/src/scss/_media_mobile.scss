@@ -1,0 +1,51 @@
+@media screen and (max-width: 576px) {
+	* {
+		--debug-max-width: 'mobile (xs) = ..576';
+	}
+
+	:root {
+		--container-padding-inline: 15px;
+		--footer-padding-inline: 15px;
+	}
+
+	.keywords {
+		margin-top: 10px;
+
+		li {
+			&:nth-child(n + 5) {
+				display: none;
+			}
+		}
+	}
+
+	.promo {
+		padding-top: 50px;
+		min-height: 500px;
+
+		&__title {
+			font-size: 26px;
+		}
+		&__subtitle {
+			margin-top: 30px;
+			font-size: 16px;
+		}
+		&__address {
+			margin-top: 233px;
+			font-size: 16px;
+
+			&::before {
+				display: none;
+			}
+		}
+
+		.btn {
+			width: 120px;
+			min-height: 30px;
+			font-size: 14px;
+		}
+	}
+
+	.footer {
+		flex-direction: column;
+	}
+}

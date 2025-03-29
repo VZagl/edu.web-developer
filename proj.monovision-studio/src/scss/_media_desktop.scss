@@ -1,0 +1,15 @@
+@media screen and (max-width: 1440px) {
+	* {
+		--debug-max-width: 'desktop (lg) = ..1440';
+	}
+
+	.keywords {
+		padding: 0 20px;
+	}
+
+	.about {
+		&__text {
+			width: 100%;
+		}
+	}
+}
