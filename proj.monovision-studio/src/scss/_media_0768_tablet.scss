@@ -1,0 +1,81 @@
+@media screen and (max-width: 768px) {
+	* {
+		--debug-max-width: 'tablet (sm) = ..768';
+	}
+
+	:root {
+		--container-padding-inline: 6%;
+		--footer-padding-inline: 6%;
+	}
+
+	.title {
+		font-size: 36px;
+	}
+
+	.keywords {
+		& li:nth-child(n + 10) {
+			display: none;
+		}
+	}
+
+	.promo {
+		background-image: url('../img/tablet_bg.jpg');
+
+		&__title {
+			font-size: 48px;
+		}
+		&__subtitle {
+			margin-top: 80px;
+		}
+		&__address {
+			margin-top: 80px;
+
+			&::before {
+				left: -40px;
+			}
+		}
+	}
+
+	.about {
+		&__text {
+			font-size: 24px;
+		}
+		.services {
+			row-gap: 40px;
+			flex-wrap: wrap;
+			margin-top: 40px;
+
+			&__items {
+				width: 100%;
+
+				& li:first-child::before {
+					left: -25px;
+				}
+				& li:nth-child(3):before {
+					left: -25px;
+				}
+			}
+			&__text {
+				width: 100%;
+			}
+		}
+	}
+
+	.works {
+		padding-top: 50px;
+
+		&__grid {
+			gap: 30px 20px;
+			margin-top: 40px;
+		}
+	}
+
+	.inspiration {
+	}
+
+	.customers {
+	}
+
+	.footer {
+	}
+}
