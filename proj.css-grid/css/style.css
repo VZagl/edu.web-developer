@@ -20,6 +20,20 @@
 	/* height: 600px; */
 }
 
+.text {
+	margin: 10px 40px;
+	border: 2px solid blue;
+	background-color: deepskyblue;
+
+	& {
+		margin-inline: 25px;
+		margin-block: 50px;
+		inline-size: 400px;
+		block-size: 150px;
+		writing-mode: vertical-rl;
+	}
+}
+
 .grid-elem {
 	/*
 		display: flex;
