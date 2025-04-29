@@ -1,6 +1,5 @@
 {
 	// "redhat.telemetry.enabled": true,
-	"workbench.iconTheme": "vscode-icons",
 	"editor.fontSize": 18,
 	"editor.tabSize": 2,
 	"editor.insertSpaces": false,
@@ -27,7 +26,7 @@
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[yaml]": {
-		"editor.defaultFormatter": "redhat.vscode-yaml"
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[json]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
@@ -46,8 +45,8 @@
 	"[sass]": {
 		"editor.defaultFormatter": "syler.sass-indented"
 	},
-
-	// настройки: Live Sass Compiler
+	/* настройки: Live Sass Compiler */
+	"liveSassCompile.settings.compileOnWatch": true,
 	// документация: https://github.com/glenn2223/vscode-live-sass-compiler/blob/HEAD/docs/settings.md#multi-root-workspaces
 	"liveSassCompile.settings.watchOnLaunch": true,
 	"liveSassCompile.settings.useNewCompiler": true,
@@ -60,7 +59,7 @@
 	],
 	"liveSassCompile.settings.showOutputWindowOn": "Warning",
 	"liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"],
-
+	/**/
 	"editor.guides.bracketPairs": true,
 	"editor.guides.bracketPairsHorizontal": true,
 	"editor.guides.highlightActiveBracketPair": true,
