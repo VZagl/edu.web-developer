@@ -12,6 +12,7 @@
 	"license": "ISC",
 	"devDependencies": {
 		"css-declaration-sorter": "^7.2.0",
+		"postcss-pxtorem": "^6.1.0",
 		"prettier": "^3.4.2",
 		"prettier-plugin-css-order": "^2.1.2",
 		"prettier-plugin-organize-attributes": "^1.0.0",

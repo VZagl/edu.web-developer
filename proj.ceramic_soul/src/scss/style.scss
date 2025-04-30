@@ -1,11 +1,12 @@
-// @use 'fonts';
+@use '/src/scss/libs/modern-normalize.min.css';
+@use '/src/scss/libs/fontello.css';
 
-@use 'variables';
+// @forward '/src/scss/base/variables.scss';
 // @use 'mixins';
-@use 'common_first';
+@use '/src/scss/base/common_first';
 
 @use 'test';
 // @use 'footer';
 
-@use 'common_last';
+@use '/src/scss/base/common_last';
 // @use 'media';
