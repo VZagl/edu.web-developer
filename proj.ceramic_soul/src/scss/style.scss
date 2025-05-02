@@ -3,10 +3,13 @@
 
 // @forward '/src/scss/base/variables.scss';
 // @use 'mixins';
-@use '/src/scss/base/common_first';
+@use '/src/scss/base/common_first.scss';
 
-@use 'test';
-// @use 'footer';
+@use '/src/scss/blocks/header.scss';
+@use '/src/scss/ui/titles.scss';
+@use '/src/scss/ui/buttons.scss';
 
-@use '/src/scss/base/common_last';
+@use '/src/scss/blocks/promo.scss';
+
+@use '/src/scss/base/common_last.scss';
 // @use 'media';

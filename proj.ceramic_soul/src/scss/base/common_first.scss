@@ -1,3 +1,5 @@
+@use '/src/scss/base/variables.scss' as v;
+
 h1,
 h2,
 h3,
@@ -48,4 +50,13 @@ img {
 html {
 	scroll-behavior: smooth;
 	font-family: 'Barlow', sans-serif;
+}
+
+body {
+	background-color: v.$light;
+}
+
+.container {
+	padding: 0 10px;
+	width: 100%;
 }

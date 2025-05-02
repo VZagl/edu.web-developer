@@ -1,0 +1,9 @@
+@use '/src/scss/base/mixins.scss' as m;
+
+.title {
+	&-h1-italic {
+		@include m.title;
+		font-style: italic;
+		font-size: 24px;
+	}
+}

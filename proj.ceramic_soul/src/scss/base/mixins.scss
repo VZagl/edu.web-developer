@@ -1,0 +1,23 @@
+@use '/src/scss/base/variables.scss' as v;
+
+@mixin title {
+	color: v.$dark;
+	font-style: normal;
+	font-weight: 500;
+	line-height: normal;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+@mixin button {
+	display: block;
+	border: 1px solid v.$dark;
+	border-radius: 2px;
+	background-color: transparent;
+	color: v.$dark;
+	font-style: normal;
+	font-weight: 400;
+	line-height: normal;
+	text-align: center;
+	text-transform: uppercase;
+}

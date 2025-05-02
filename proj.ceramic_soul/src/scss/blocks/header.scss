@@ -1,0 +1,51 @@
+@use '/src/scss/base/variables.scss' as v;
+
+.header {
+	display: flex;
+	justify-content: space-between;
+	align-items: start;
+
+	&__logo {
+		display: flex;
+		// width: 100px;
+		// height: 100px;
+
+		img {
+			width: 100px;
+			height: 100px;
+		}
+	}
+	&__icons {
+		display: flex;
+		column-gap: 15px;
+		flex: 1;
+		justify-content: flex-end;
+
+		a {
+			display: block;
+
+			span {
+				display: block;
+				width: 20px;
+				height: 20px;
+				color: v.$dark;
+			}
+		}
+	}
+}
+
+.burger {
+	display: flex;
+	row-gap: 10px;
+	flex: 1;
+	flex-direction: column;
+	// padding-right: 35px;
+	// height: 23px;
+
+	span {
+		display: block;
+		background-color: v.$dark;
+		width: 20px;
+		height: 1px;
+	}
+}
