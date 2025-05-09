@@ -1,19 +1,21 @@
 @use '/src/scss/base/variables.scss' as v;
 
 .header {
-	display: flex;
-	justify-content: space-between;
-	align-items: start;
+	// display: flex;
+	// flex-direction: column;
+	// justify-content: space-between;
+	// align-items: center;
 
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		align-items: start;
+		// width: 100%;
+	}
 	&__logo {
 		display: flex;
-		// width: 100px;
-		// height: 100px;
-
-		img {
-			width: 100px;
-			height: 100px;
-		}
+		width: 100px;
+		height: 100px;
 	}
 	&__icons {
 		display: flex;
@@ -31,6 +33,9 @@
 				color: v.$dark;
 			}
 		}
+	}
+	&__nav {
+		display: none;
 	}
 }
 

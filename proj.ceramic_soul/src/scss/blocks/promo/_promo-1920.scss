@@ -1,0 +1,25 @@
+@media screen and (min-width: 1920px) {
+	.promo {
+		padding-top: 40px;
+
+		&__wrapper {
+			margin-top: 79px;
+		}
+		&__title {
+			padding: 384px 30px 0 642px;
+		}
+		&__cta {
+		}
+		&__img {
+			width: 330px;
+			height: 460px;
+		}
+		&__btn {
+			margin-top: 50px;
+		}
+		&__potter {
+			width: 640px;
+			height: 900px;
+		}
+	}
+}

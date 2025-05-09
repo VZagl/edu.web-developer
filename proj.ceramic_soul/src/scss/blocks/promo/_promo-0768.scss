@@ -1,0 +1,26 @@
+@media screen and (min-width: 768px) {
+	.promo {
+		&__wrapper {
+			display: flex;
+			justify-content: space-between;
+			align-items: flex-start;
+		}
+		&__title {
+			display: block;
+			padding: 250px 90px 0 71px;
+			// margin-inline: 70px 90px;
+			// margin-block-start: 250px;
+			text-align: left;
+		}
+		&__cta {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			margin: 0;
+		}
+		&__img {
+			width: 230px;
+			height: 321px;
+		}
+	}
+}

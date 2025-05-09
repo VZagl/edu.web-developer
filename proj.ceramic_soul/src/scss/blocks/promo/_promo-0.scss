@@ -1,18 +1,26 @@
 .promo {
+	position: relative;
 	padding-top: 50px;
 
+	&__wrapper {
+		margin-top: 50px;
+	}
 	&__title {
-		// margin: 50px 5px 0;
-		margin-inline: 5px;
-		margin-block-start: 50px;
+		padding-inline: 5px;
+	}
+	&__cta {
+		margin-top: 40px;
 	}
 	&__img {
-		margin: 40px auto 0;
+		margin: 0 auto;
 		box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
 		width: 270px;
 		height: 377px;
 	}
 	&__btn {
 		margin: 18px auto 0;
+	}
+	&__potter {
+		display: none;
 	}
 }

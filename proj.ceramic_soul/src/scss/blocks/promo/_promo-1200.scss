@@ -1,0 +1,16 @@
+@media screen and (min-width: 1200px) {
+	.promo {
+		&__potter {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: clamp(450px, 37.5vw, 640px);
+			height: 633px;
+			object-fit: cover;
+		}
+		&__title {
+			padding: 250px 10px 0 571px;
+		}
+	}
+}
