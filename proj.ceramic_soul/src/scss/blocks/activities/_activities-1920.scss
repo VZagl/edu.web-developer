@@ -1,0 +1,7 @@
+@use '/src/scss/base/variables.scss' as v;
+
+@media screen and (min-width: 1920px) {
+	.activities {
+		padding-top: 100px;
+	}
+}

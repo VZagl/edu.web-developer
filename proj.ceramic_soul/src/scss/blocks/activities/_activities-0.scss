@@ -1,0 +1,27 @@
+@use '/src/scss/base/variables.scss' as v;
+
+.activities {
+	padding-top: 60px;
+
+	&__wrapper {
+		row-gap: 40px;
+		margin-top: 20px;
+	}
+	&__img {
+		margin-top: 40px;
+		box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+		width: 100%;
+	}
+	&__text {
+		margin-top: 20px;
+		color: v.$dark;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: normal;
+
+		&--colored {
+			color: v.$ceramic;
+			font-weight: 500;
+		}
+	}
+}

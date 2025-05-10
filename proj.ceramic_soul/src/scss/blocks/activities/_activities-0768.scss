@@ -1,0 +1,15 @@
+@use '/src/scss/base/variables.scss' as v;
+
+@media screen and (min-width: 768px) {
+	.activities {
+		padding: 60px 95px 0;
+
+		&__wrapper {
+			margin-top: 40px;
+		}
+		&__text {
+			margin-top: 25px;
+			font-size: 20px;
+		}
+	}
+}

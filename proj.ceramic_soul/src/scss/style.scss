@@ -1,8 +1,8 @@
 @use '/src/scss/libs/modern-normalize.min.css';
+@use '/src/scss/libs/grids-min.css';
+@use '/src/scss/libs/grids-responsive-min.css';
 @use '/src/scss/libs/fontello.css';
 
-// @forward '/src/scss/base/variables.scss';
-// @use 'mixins';
 @use '/src/scss/base/common_first.scss';
 
 @use '/src/scss/ui/titles.scss';
@@ -10,6 +10,6 @@
 
 @use '/src/scss/blocks/header/header.scss';
 @use '/src/scss/blocks/promo/promo.scss';
+@use '/src/scss/blocks/activities/activities.scss';
 
 @use '/src/scss/base/common_last.scss';
-// @use 'media';
