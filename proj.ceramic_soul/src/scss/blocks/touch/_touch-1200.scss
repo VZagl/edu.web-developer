@@ -2,17 +2,20 @@
 
 @media screen and (min-width: 1200px) {
 	.touch {
-		&__img-tea {
+		&__img {
+			display: block;
 			box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
-			// width: 550px;
+			width: 550px;
+			height: 342px;
+			object-fit: cover;
 		}
-		&__left {
-			display: block;
-			padding-right: 20px;
+		&__input {
+			&:hover {
+				outline: 1px solid v.$dark;
+				border: none;
+			}
 		}
-		&__right {
-			display: block;
-			position: relative;
+		&__form {
 			padding-left: 20px;
 		}
 	}

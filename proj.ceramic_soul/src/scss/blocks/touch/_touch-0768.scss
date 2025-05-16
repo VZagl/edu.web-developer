@@ -2,16 +2,16 @@
 
 @media screen and (min-width: 768px) {
 	.touch {
-		&__wrapper {
-			margin-top: 45px;
+		&__form {
+			position: relative;
+			padding-left: 24px;
+			width: 300px;
 		}
-		&__img-vase {
+		&__decor {
 			display: block;
 			position: absolute;
 			right: 0;
 			bottom: 0;
-			width: 85px;
-			height: 85px;
 		}
 	}
 }
