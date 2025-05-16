@@ -1,0 +1,24 @@
+@use '/src/scss/base/variables.scss' as v;
+
+@media screen and (min-width: 1920px) {
+	.touch {
+		&__wrapper {
+			// justify-content: stretch;
+			// align-items: start;
+			margin-top: 80px;
+		}
+		&__img-tea {
+			width: 100%;
+		}
+		&__left {
+			padding-right: 0;
+		}
+		&__right {
+			padding-right: 75px;
+			padding-left: 147px;
+		}
+		&__img-vase {
+			margin-right: 75px;
+		}
+	}
+}

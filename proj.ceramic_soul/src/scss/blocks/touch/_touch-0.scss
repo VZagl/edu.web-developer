@@ -1,0 +1,24 @@
+@use '/src/scss/base/variables.scss' as v;
+
+.touch {
+	padding-top: 60px;
+
+	&__wrapper {
+		display: flex;
+		position: relative;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: start;
+		// gap: 40px;
+		margin-top: 60px;
+	}
+	&__btn {
+		margin-top: 20px;
+		width: 220px;
+		height: 40px;
+	}
+	&__left,
+	&__img-vase {
+		display: none;
+	}
+}
