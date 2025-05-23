@@ -1,83 +1,161 @@
 {
-	// "redhat.telemetry.enabled": true,
-	"editor.fontSize": 18,
-	"editor.tabSize": 2,
-	"editor.insertSpaces": false,
-	"scm.inputFontSize": 14,
-	"markdown.preview.fontSize": 18,
-	"editor.inlineSuggest.suppressSuggestions": true,
-	"editor.defaultFormatter": "esbenp.prettier-vscode",
-	"notebook.defaultFormatter": "esbenp.prettier-vscode",
-	"editor.formatOnSave": true,
-	"editor.tabCompletion": "on",
-	"prettier.useTabs": true,
-	"liveServer.settings.donotShowInfoMsg": true,
-	"editor.linkedEditing": true,
-	"html.hover.references": false,
-	"html.hover.documentation": false,
-	"typescript.experimental.expandableHover": true,
-	"editor.hover.delay": 1000,
-	"emmet.triggerExpansionOnTab": true,
+	"editor": {
+		"codeActionsOnSave": {
+			"source.fixAll": "explicit",
+			"source.organizeImports": "explicit",
+			"source.sortMembers": "explicit"
+		},
+		"guides": {
+			"bracketPairs": true
+		},
+		"tabSize": 2,
+		"insertSpaces": false,
+		"inlineSuggest": {
+			"suppressSuggestions": true
+		},
+		"defaultFormatter": "esbenp.prettier-vscode",
+		"formatOnSave": true,
+		"tabCompletion": "on",
+		"linkedEditing": true,
+		"hover": {
+			"delay": 1000
+		}
+	},
 
+	"files": {
+		"exclude": {
+			"**/.terragrunt-cache": true,
+			"**/.cache": true,
+			"**/node_modules": true,
+			"**/vscode-chat-code-block": true
+		},
+		"eol": "\r\n",
+		"associations": {
+			"*.ts": "typescript"
+		}
+	},
+
+	"github": {
+		"copilot": {
+			"advanced": {
+				"ignoredFiles": {
+					"/node_modules/": true,
+					"/dist/": true,
+					"/build/": true,
+					"/out/": true,
+					"/*.min.js": true,
+					"**/vscode-chat-code-block": true
+				},
+				"ignoredFolders": {
+					"/node_modules": true,
+					"/dist": true,
+					"/build": true,
+					"/out": true,
+					"**/vscode-chat-code-block": true
+				},
+				"listCount": 3,
+				"debugOverrideEngine": "codegen",
+				"timeoutMs": 5000
+			},
+			"chat": {
+				"localeOverride": "ru",
+				"reviewSelection": {
+					"enabled": false
+				},
+				"commitMessageGeneration": {
+					"instructions": []
+				}
+			},
+			"enable": {
+				"*": true,
+				"plaintext": false,
+				"markdown": false,
+				"scminput": false,
+				"workspaceFolder": true
+			}
+		}
+	},
+
+	"indentRainbow": {
+		"updateDelay": 100,
+		"colors": [
+			"rgba(255, 255,  64, 0.05)",
+			"rgba(127, 255, 127, 0.05)",
+			"rgba(255, 127, 255, 0.05)",
+			"rgba( 79, 236, 236, 0.05)"
+		]
+	},
+
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
 	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[json]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[scss]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
 	"[yaml]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[json]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+		"editor.defaultFormatter": "redhat.vscode-yaml"
 	},
 	"[css]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode"
 	},
-	"[jsonc]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
-	},
-	"[typescriptreact]": {
-		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	"[bsl]": {
+		"editor.defaultFormatter": "1c-syntax.language-1c-bsl"
 	},
 
-	// настройки: Sass (.sass only)
-	"[sass]": {
-		"editor.defaultFormatter": "syler.sass-indented"
+	"search": {
+		"followSymlinks": false
 	},
-	/* настройки: Live Sass Compiler */
-	"liveSassCompile.settings.compileOnWatch": true,
-	// документация: https://github.com/glenn2223/vscode-live-sass-compiler/blob/HEAD/docs/settings.md#multi-root-workspaces
-	"liveSassCompile.settings.watchOnLaunch": true,
-	"liveSassCompile.settings.useNewCompiler": true,
-	"liveSassCompile.settings.formats": [
-		{
-			"format": "expanded",
-			"extensionName": ".css",
-			"savePath": "~/../css"
+
+	"typescript": {
+		"experimental": {
+			"expandableHover": true
 		}
-	],
-	"liveSassCompile.settings.showOutputWindowOn": "Warning",
-	"liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"],
-	/**/
-	"editor.guides.bracketPairs": true,
-	"editor.guides.bracketPairsHorizontal": true,
-	"editor.guides.highlightActiveBracketPair": true,
-	"editor.bracketPairColorization.enabled": true,
-	"workbench.colorCustomizations": {
-		"editorBracketHighlight.foreground1": "#FFff33",
-		"editorBracketHighlight.foreground2": "#33FF57",
-		"editorBracketHighlight.foreground3": "#A133FF",
-		"editorBracketHighlight.foreground4": "#3357FF"
 	},
 
-	// The delay in ms until the editor gets updated.
-	"indentRainbow.updateDelay": 100 // 10 makes it super fast but may cost more resources
-	// Defining custom colors instead of default "Rainbow" for dark backgrounds.
-	// "indentRainbow.colors": [
-	// 	"rgba(255,255,64,0.07)",
-	// 	"rgba(127,255,127,0.07)",
-	// 	"rgba(255,127,255,0.07)",
-	// 	"rgba(79,236,236,0.07)"
-	// ]
+	"html": {
+		"hover": {
+			"references": false,
+			"documentation": false
+		}
+	},
+
+	"emmet": {
+		"triggerExpansionOnTab": true
+	},
+
+	"prettier": {
+		"useTabs": true
+	},
+
+	"notebook": {
+		"defaultFormatter": "esbenp.prettier-vscode"
+	},
+
+	"markdown": {
+		"preview": {
+			"breaks": true, // Одиночные переносы строк отображаются как <br>
+			"typographer": true // Включает типографские улучшения текста
+		},
+		"extension.preview.autoShowPreviewToSide": true // Автоматически открывать предпросмотр Markdown сбоку
+	},
+
+	"[markdown]": {
+		// "editor.defaultFormatter": "yzhang.markdown-all-in-one",
+		"editor.defaultFormatter": "esbenp.prettier-vscode", // Использует Prettier для форматирования Markdown файлов
+		"editor.formatOnSave": true, // Автоматическое форматирование при сохранении
+		"editor.wordWrap": "on", // Включает перенос строк для удобства чтения
+		"editor.renderWhitespace": "all", // Показывает символы пробелов и табуляции
+		"editor.quickSuggestions": {
+			// Настройки автодополнения
+			"comments": "on", // Включено в комментариях
+			"strings": "on", // Включено в строках
+			"other": "on" // Включено везде
+		}
+	}
 }
