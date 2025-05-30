@@ -1,0 +1,29 @@
+@use '/src/scss/base/variables.scss' as v;
+
+.works {
+	padding-top: 60px;
+
+	&__slider {
+		margin-top: 40px;
+	}
+	.swiper-slide img {
+		width: 100%;
+	}
+	.works__slider-nav {
+		display: none;
+	}
+	.swiper-pagination {
+		bottom: -35px;
+	}
+	.swiper-pagination-bullet {
+		opacity: 1;
+		border-radius: 0%;
+		background-color: v.$dark;
+		width: 10px;
+		height: 10px;
+		-webkit-tap-highlight-color: transparent;
+	}
+	.swiper-pagination-bullet-active {
+		background-color: v.$ceramic;
+	}
+}

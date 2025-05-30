@@ -1,0 +1,12 @@
+@media screen and (min-width: 768px) {
+	.works {
+		.swiper-slide img {
+			display: block;
+			margin: 0 auto;
+			width: 400px;
+		}
+		&__slider {
+			margin-top: 45px;
+		}
+	}
+}
