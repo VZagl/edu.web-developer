@@ -1,0 +1,10 @@
+@media screen and (min-width: 1200px) {
+	.footer {
+		&__newsletter {
+			width: auto;
+		}
+		&__copyright {
+			margin-top: 50px;
+		}
+	}
+}
