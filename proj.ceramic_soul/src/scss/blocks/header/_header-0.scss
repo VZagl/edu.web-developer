@@ -1,10 +1,11 @@
 @use '/src/scss/base/variables.scss' as v;
 
+.scroll-off {
+	overflow: hidden;
+}
+
 .header {
-	// display: flex;
-	// flex-direction: column;
-	// justify-content: space-between;
-	// align-items: center;
+	position: relative;
 
 	&__top {
 		display: flex;
@@ -36,6 +37,74 @@
 	}
 	&__nav {
 		display: none;
+	}
+	&__menu {
+		position: fixed;
+		top: 0;
+		left: -100vw;
+		opacity: 0;
+		z-index: 100;
+		transition:
+			transform 1s ease-in-out,
+			opacity 1s ease-in-out;
+		background-color: v.$ui-disabled;
+		// background-color: v.$light;
+		padding: 50px 10px;
+		width: 80vw;
+		height: 100vh;
+
+		&--active {
+			transform: translateX(100vw);
+			opacity: 1;
+		}
+		&-close {
+			position: relative;
+			z-index: 101;
+			cursor: pointer;
+			width: 14px;
+			height: 14px;
+
+			span {
+				display: inline-block;
+				background-color: v.$dark;
+				width: 19px;
+				height: 1px;
+
+				&:nth-child(n) {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform-origin: center;
+				}
+				&:nth-child(1) {
+					transform: translate(-50%, -50%) rotate(45deg);
+				}
+				&:nth-child(2) {
+					transform: translate(-50%, -50%) rotate(-45deg);
+				}
+			}
+		}
+		&-nav {
+			margin-top: 50px;
+			padding-left: 14px;
+
+			ul {
+				display: flex;
+				row-gap: 25px;
+				flex-direction: column;
+				padding: 0;
+				list-style: none;
+			}
+		}
+		&-link {
+			color: v.$dark;
+			font-style: normal;
+			font-weight: 400;
+			font-size: 20px;
+			line-height: normal;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
 	}
 }
 

@@ -12,6 +12,28 @@ console.log('This is the `index` page');
 document.addEventListener('DOMContentLoaded', () => {
 	console.log('DOM fully loaded and parsed');
 
+	// Burger menu
+	const burger = document.querySelector('.burger'),
+		close = document.querySelector('.header__menu-close'),
+		menu = document.querySelector('.header__menu');
+
+	burger.addEventListener('click', () => {
+		menu.classList.add('header__menu--active');
+		// document.body.style.overflow = 'hidden';
+		if (!document.body.classList.contains('scroll-off')) {
+			document.body.classList.add('scroll-off');
+		}
+	});
+
+	close.addEventListener('click', () => {
+		menu.classList.remove('header__menu--active');
+		// document.body.style.overflow = 'auto';
+		if (document.body.classList.contains('scroll-off')) {
+			document.body.classList.remove('scroll-off');
+		}
+	});
+
+	// Slider
 	try {
 		new Swiper('.works__slider', {
 			slidesPerView: 1,
