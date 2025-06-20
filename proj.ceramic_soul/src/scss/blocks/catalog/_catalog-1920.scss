@@ -1,4 +1,26 @@
 @media screen and (min-width: 1920px) {
 	.catalog {
+		padding-top: 40px;
+
+		&__title {
+			margin-top: 100px;
+		}
+		&__content {
+			&-item {
+				column-gap: 83px;
+			}
+		}
+		&__card {
+			width: 285px;
+			min-height: 250px;
+
+			&-img {
+				height: 180px;
+			}
+			&-info {
+				row-gap: 7px;
+				padding: 10px 10px 15px;
+			}
+		}
 	}
 }
