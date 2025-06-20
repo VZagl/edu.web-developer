@@ -1,0 +1,55 @@
+@use '/src/scss/base/variables.scss' as v;
+@use '/src/scss/base/mixins.scss' as m;
+
+.catalog {
+	padding-top: 50px;
+
+	&__title {
+		margin-top: 60px;
+	}
+	&__tabs {
+		display: flex;
+		column-gap: 50px;
+		row-gap: 13px;
+		flex-wrap: wrap;
+		margin-top: 60px;
+		border: 1px solid v.$dark;
+		padding: 13px 25px;
+	}
+	&__tab {
+		position: relative;
+		cursor: pointer;
+		border: none;
+		background: none;
+		padding: 0;
+		color: #000;
+		font-style: normal;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: normal;
+		text-transform: uppercase;
+
+		&--active {
+			&::before {
+				position: absolute;
+				bottom: -1px;
+				background-color: #000;
+				width: 100%;
+				height: 1px;
+				content: '';
+			}
+		}
+	}
+	&__content {
+		margin-top: 60px;
+	}
+	&__content-item {
+		display: none;
+		row-gap: 20px;
+		flex-direction: column;
+
+		&--active {
+			display: flex;
+		}
+	}
+}

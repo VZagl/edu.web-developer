@@ -5,10 +5,15 @@ import { defineConfig } from 'vite';
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
 export default defineConfig({
+	// Конфигурация сборки проекта
 	build: {
+		// Опции для Rollup (сборщик, который использует Vite под капотом)
 		rollupOptions: {
+			// Определяем входные точки для многостраничного приложения
 			input: {
+				// Главная страница - используем resolve для получения абсолютного пути
 				main: resolve(__dirname, 'index.html'),
+				// Страница 'catalog.html' - относительный путь от корня проекта
 				catalog: 'catalog.html',
 				blog: 'blog.html',
 				about: 'about.html',

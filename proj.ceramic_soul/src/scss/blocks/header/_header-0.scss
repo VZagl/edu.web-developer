@@ -43,7 +43,7 @@
 		top: 0;
 		left: -100vw;
 		opacity: 0;
-		z-index: 100;
+		z-index: 1000;
 		transition:
 			transform 1s ease-in-out,
 			opacity 1s ease-in-out;
@@ -59,7 +59,7 @@
 		}
 		&-close {
 			position: relative;
-			z-index: 101;
+			z-index: 1001;
 			cursor: pointer;
 			width: 14px;
 			height: 14px;

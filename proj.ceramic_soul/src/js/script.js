@@ -59,4 +59,46 @@ document.addEventListener('DOMContentLoaded', () => {
 			modules: [Navigation, Pagination],
 		});
 	} catch (e) {}
+
+	// Tabs
+
+	try {
+		const tabs = document.querySelectorAll('.catalog__tab');
+		const contents = document.querySelectorAll('.catalog__content-item');
+
+		tabs.forEach((tab, index) => {
+			tab.addEventListener('click', () => {
+				activateTab(index);
+			});
+		});
+
+		// Показываем первый контент при загрузке
+		// contents.forEach((c, i) => (c.style.display = i === 0 ? 'flex' : 'none'));
+		// Индекс активного таба
+		const activeTabIndex = 0;
+		// Программно активируем activeTabIndex-й таб
+		activateTab(activeTabIndex);
+
+		// Функция для активации таба по индексу
+		function activateTab(index = 0) {
+			if (!tabs) return;
+			if (index >= 0 && index < tabs.length) {
+				// Удаляем активный класс у всех табов и контента
+				tabs.forEach((t) => {
+					t.classList.remove('catalog__tab--active');
+				});
+				contents.forEach((c) => {
+					c.classList.remove('catalog__content-item--active');
+					// c.style.display = 'none';
+				});
+
+				// Добавляем активный класс к выбранному табу и показываем соответствующий контент
+				tabs[index].classList.add('catalog__tab--active');
+				contents[index].classList.add('catalog__content-item--active');
+				// contents[index].style.display = 'flex';
+			}
+		}
+	} catch (e) {}
+
+	//
 });

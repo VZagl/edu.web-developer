@@ -1,18 +1,20 @@
 @use '/src/scss/libs/modern-normalize.min.css';
 @use '/src/scss/libs/grids-min.css';
 @use '/src/scss/libs/grids-responsive-min.css';
-@use '/src/scss/libs/fontello.css';
 
+@use '/src/scss/base/fonts.scss';
 @use '/src/scss/base/common_first.scss';
 
 @use '/src/scss/ui/titles.scss';
 @use '/src/scss/ui/buttons.scss';
 
 @use '/src/scss/blocks/header/header.scss';
+@use '/src/scss/blocks/footer/footer.scss';
+
 @use '/src/scss/blocks/promo/promo.scss';
 @use '/src/scss/blocks/activities/activities.scss';
 @use '/src/scss/blocks/touch/touch.scss';
 @use '/src/scss/blocks/works/works.scss';
-@use '/src/scss/blocks/footer/footer.scss';
+@use '/src/scss/blocks/catalog/catalog.scss';
 
-@use '/src/scss/base/common_last.scss';
+// @use '/src/scss/base/common_last.scss';
