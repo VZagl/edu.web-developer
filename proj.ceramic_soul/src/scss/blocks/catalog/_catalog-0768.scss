@@ -1,4 +1,4 @@
-@use '/src/scss/base/variables.scss' as v;
+@use '/src/scss/base/mixins.scss' as m;
 
 @media screen and (min-width: 768px) {
 	.catalog {
@@ -8,25 +8,8 @@
 		&__content {
 			position: relative;
 			padding: 10px;
+			@include m.angle-decoration;
 
-			&::before {
-				position: absolute;
-				top: 0;
-				left: 0;
-				background-color: v.$dark;
-				width: 200px;
-				height: 1px;
-				content: '';
-			}
-			&::after {
-				position: absolute;
-				top: 0;
-				left: 0;
-				background-color: v.$dark;
-				width: 1px;
-				height: 200px;
-				content: '';
-			}
 			&-item {
 				flex-direction: row;
 				flex-wrap: wrap;

@@ -61,7 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
 	} catch (e) {}
 
 	// Tabs
-
 	try {
 		const tabs = document.querySelectorAll('.catalog__tab');
 		const contents = document.querySelectorAll('.catalog__content-item');

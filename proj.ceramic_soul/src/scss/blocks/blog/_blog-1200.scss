@@ -1,0 +1,19 @@
+@media screen and (min-width: 1200px) {
+	.blog {
+		&__wrapper {
+			flex-direction: row;
+			flex-wrap: wrap;
+			justify-content: space-between;
+			align-items: flex-start;
+			gap: 50px;
+		}
+		&__card {
+			width: 520px;
+			min-height: 375px;
+		}
+		&__img {
+			height: 241px;
+			object-fit: cover;
+		}
+	}
+}

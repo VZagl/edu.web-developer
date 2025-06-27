@@ -1,0 +1,19 @@
+@media screen and (min-width: 1920px) {
+	.blog {
+		padding: 40px 0 100px;
+
+		&__wrapper {
+			align-items: stretch;
+		}
+		&__title {
+			margin-top: 100px;
+		}
+		&__card {
+			width: 670px;
+		}
+		&__img {
+			height: 241px;
+			object-fit: fill;
+		}
+	}
+}

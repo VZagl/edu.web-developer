@@ -1,0 +1,46 @@
+@use '/src/scss/base/variables.scss' as v;
+@use '/src/scss/base/mixins.scss' as m;
+
+.blog {
+	padding: 50px 0 60px;
+
+	&__title {
+		margin-top: 60px;
+	}
+	&__title-h3 {
+		text-align: left;
+	}
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		gap: 40px;
+		margin-top: 60px;
+	}
+	&__card {
+		box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+		border: 1px solid v.$dark;
+		background: v.$light;
+	}
+	&__data {
+		&-column {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 25px;
+			padding: 25px 25px 0;
+		}
+	}
+	&__text {
+		margin-top: 25px;
+		padding: 0 25px 25px;
+		color: v.$dark;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: normal;
+	}
+	&__img {
+		transform: translateX(-1px) translateY(-1px);
+		max-inline-size: calc(100% + 2px);
+	}
+}

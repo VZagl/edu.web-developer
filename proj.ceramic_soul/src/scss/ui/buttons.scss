@@ -50,6 +50,19 @@
 	}
 }
 
+.btn-read {
+	@include m.button;
+	display: inline-block;
+	min-width: 145px;
+	min-height: 32px;
+	font-size: 14px;
+
+	&:focus {
+		outline: 1px solid v.$ceramic;
+		border: 1px solid v.$ceramic;
+	}
+}
+
 @media screen and (min-width: 1200px) {
 	.btn-default {
 		&:hover {
@@ -64,6 +77,16 @@
 		}
 	}
 	.btn-send {
+		&:active {
+			outline: 1px solid v.$ceramic;
+			border: 1px solid v.$ceramic;
+		}
+		&:hover {
+			border: 1px solid v.$ceramic;
+			color: v.$ceramic;
+		}
+	}
+	.btn-read {
 		&:active {
 			outline: 1px solid v.$ceramic;
 			border: 1px solid v.$ceramic;
