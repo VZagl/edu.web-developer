@@ -1,0 +1,25 @@
+@use '/src/scss/base/variables.scss' as v;
+@use '/src/scss/base/mixins.scss' as m;
+
+.header {
+	padding-top: 50px;
+}
+.about {
+	padding-top: 60px;
+
+	&__wrapper {
+		gap: 35px;
+		margin-top: 60px;
+
+		img {
+			inline-size: 100%;
+		}
+	}
+	p {
+		color: v.$dark;
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: normal;
+	}
+}
