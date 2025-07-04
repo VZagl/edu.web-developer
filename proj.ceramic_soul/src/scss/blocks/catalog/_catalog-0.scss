@@ -2,11 +2,8 @@
 @use '/src/scss/base/mixins.scss' as m;
 
 .catalog {
-	padding: 50px 0 60px;
+	padding: 60px 0;
 
-	&__title {
-		margin-top: 60px;
-	}
 	&__tabs {
 		display: flex;
 		column-gap: 50px;
