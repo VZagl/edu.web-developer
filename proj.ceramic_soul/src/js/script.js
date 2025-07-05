@@ -1,5 +1,6 @@
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
+import JustValidate from 'just-validate';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -99,5 +100,110 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	} catch (e) {}
 
+	// JustValidate (form.touch__form)
+	{
+		const formSelector = 'form.touch__form';
+		try {
+			const validator = new JustValidate(formSelector, {
+				// submitFormAutomatically: true,
+			});
+
+			validator
+				.addField(
+					'#name',
+					[
+						{
+							rule: 'required',
+							errorMessage: 'Please enter your name',
+						},
+						{
+							rule: 'minLength',
+							value: 2,
+							errorMessage: 'Min length is 2',
+						},
+					],
+					{
+						errorsContainer: document
+							.querySelector(formSelector)
+							.querySelector('.name-error-message'),
+					}
+				)
+				.addField('#email', [{ rule: 'required' }, { rule: 'email' }], {
+					errorsContainer: document
+						.querySelector(formSelector)
+						.querySelector('.email-error-message'),
+				})
+				.addField(
+					'#question',
+					[
+						{ rule: 'required', errorMessage: 'Please enter your question' },
+						{
+							rule: 'minLength',
+							value: 5,
+							errorMessage: 'Min length is 5',
+						},
+						{
+							rule: 'maxLength',
+							value: 150,
+							errorMessage: 'Max length is 150',
+						},
+					],
+					{
+						errorsContainer: document
+							.querySelector(formSelector)
+							.querySelector('.question-error-message'),
+					}
+				)
+				.addField(
+					'#checkbox',
+					[
+						{
+							rule: 'required',
+							errorMessage: 'Please agree',
+						},
+					],
+					{
+						errorsContainer: document
+							.querySelector(formSelector)
+							.querySelector('.checkbox-error-message'),
+					}
+				);
+		} catch (e) {
+			console.error(`[ERROR] JustValidate (${formSelector})`, e);
+		}
+	}
+
+	// JustValidate (form.footer__form)
+	{
+		const formSelector = 'form.footer__form';
+		try {
+			const validator = new JustValidate(formSelector, {
+				// submitFormAutomatically: true,
+			});
+
+			validator
+				.addField('#email', [{ rule: 'required' }, { rule: 'email' }], {
+					errorsContainer: document
+						.querySelector(formSelector)
+						.querySelector('.email-error-message'),
+				})
+				.addField(
+					'#footer__checkbox',
+					[
+						{
+							rule: 'required',
+							errorMessage: 'Please agree',
+						},
+					],
+					{
+						errorsContainer: document
+							.querySelector(formSelector)
+							.querySelector('.checkbox-error-message'),
+					}
+				);
+		} catch (e) {
+			console.error(`[ERROR] JustValidate (${formSelector})`, e);
+		}
+	}
 	//
 });
