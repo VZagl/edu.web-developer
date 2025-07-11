@@ -382,7 +382,7 @@ validator
 		console.log('Форма валидна!');
 
 		// Получение данных формы
-		const formData = new FormData(event.target);
+		const formData = new FormData(event.currentTarget);
 
 		// Отправка на сервер
 		fetch('/submit', {
@@ -617,7 +617,7 @@ registrationValidator
 	.onSuccess((event) => {
 		console.log('Регистрация успешна!');
 
-		const formData = new FormData(event.target);
+		const formData = new FormData(event.currentTarget);
 
 		// Отправка данных регистрации
 		fetch('/api/register', {
@@ -743,10 +743,12 @@ contactValidator
 		},
 	])
 	.onSuccess((event) => {
-		const formData = new FormData(event.target);
+		const formData = new FormData(event.currentTarget);
 
 		// Показать индикатор загрузки
-		const submitBtn = event.target.querySelector('button[type="submit"]');
+		const submitBtn = event.currentTarget.querySelector(
+			'button[type="submit"]'
+		);
 		const originalText = submitBtn.textContent;
 		submitBtn.textContent = 'Отправка...';
 		submitBtn.disabled = true;
@@ -758,7 +760,7 @@ contactValidator
 			.then((response) => response.json())
 			.then((data) => {
 				alert('Сообщение отправлено успешно!');
-				event.target.reset();
+				event.currentTarget.reset();
 			})
 			.catch((error) => {
 				console.error('Ошибка:', error);
@@ -878,7 +880,7 @@ export default {
 	methods: {
 		handleSubmit(event) {
 			// Обработка отправки формы
-			const formData = new FormData(event.target);
+			const formData = new FormData(event.currentTarget);
 			console.log('Данные формы:', Object.fromEntries(formData));
 		},
 	},
@@ -1776,8 +1778,8 @@ class AnalyticsValidator {
 		this.validator
 			.onSuccess((event) => {
 				this.trackEvent('form_submit_success', {
-					form_id: event.target.id,
-					form_name: event.target.name || 'unnamed',
+					form_id: event.currentTarget.id,
+					form_name: event.currentTarget.name || 'unnamed',
 				});
 			})
 			.onFail((fields) => {
@@ -2045,10 +2047,10 @@ class CSRFProtectedValidator {
 			}
 
 			// Добавление CSRF токена к данным формы
-			const formData = new FormData(event.target);
+			const formData = new FormData(event.currentTarget);
 			formData.append('_token', this.csrfToken);
 
-			this.submitWithCSRF(formData, event.target.action);
+			this.submitWithCSRF(formData, event.currentTarget.action);
 		});
 	}
 
