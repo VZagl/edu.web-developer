@@ -182,10 +182,10 @@ document.addEventListener('DOMContentLoaded', () => {
 			});
 
 			validator
-				.addField('#email', [{ rule: 'required' }, { rule: 'email' }], {
+				.addField('#footer__email', [{ rule: 'required' }, { rule: 'email' }], {
 					errorsContainer: document
 						.querySelector(formSelector)
-						.querySelector('.email-error-message'),
+						.querySelector('.footer__email-error-message'),
 				})
 				.addField(
 					'#footer__checkbox',
@@ -198,7 +198,7 @@ document.addEventListener('DOMContentLoaded', () => {
 					{
 						errorsContainer: document
 							.querySelector(formSelector)
-							.querySelector('.checkbox-error-message'),
+							.querySelector('.footer__checkbox-error-message'),
 					}
 				);
 		} catch (e) {
