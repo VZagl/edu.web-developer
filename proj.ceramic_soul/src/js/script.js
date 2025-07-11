@@ -167,9 +167,30 @@ document.addEventListener('DOMContentLoaded', () => {
 							.querySelector(formSelector)
 							.querySelector('.checkbox-error-message'),
 					}
-				);
+				)
+				.onSuccess((event) => {
+					const form = event.currentTarget;
+					const formData = new FormData(form);
+
+					console.warn(
+						`⚠️ Форма (${formSelector}) отправляется на тестовый сервер...`
+					);
+
+					fetch('https://httpbin.org/post', {
+						method: 'POST',
+						body: formData,
+					})
+						.then((res) => res.json())
+						.then((data) => {
+							console.info(
+								`✅ Форма (${formSelector}) успешно отправлена: `,
+								data
+							);
+							form.reset();
+						});
+				});
 		} catch (e) {
-			console.error(`[ERROR] JustValidate (${formSelector})`, e);
+			console.error(`❌ Ошибка отправки формы (${formSelector}): `, e);
 		}
 	}
 
@@ -200,9 +221,30 @@ document.addEventListener('DOMContentLoaded', () => {
 							.querySelector(formSelector)
 							.querySelector('.footer__checkbox-error-message'),
 					}
-				);
+				)
+				.onSuccess((event) => {
+					const form = event.currentTarget;
+					const formData = new FormData(form);
+
+					console.warn(
+						`⚠️ Форма (${formSelector}) отправляется на тестовый сервер...`
+					);
+
+					fetch('https://httpbin.org/post', {
+						method: 'POST',
+						body: formData,
+					})
+						.then((res) => res.json())
+						.then((data) => {
+							console.info(
+								`✅ Форма (${formSelector}) успешно отправлена: `,
+								data
+							);
+							form.reset();
+						});
+				});
 		} catch (e) {
-			console.error(`[ERROR] JustValidate (${formSelector})`, e);
+			console.error(`❌ Ошибка отправки формы (${formSelector}): `, e);
 		}
 	}
 	//
