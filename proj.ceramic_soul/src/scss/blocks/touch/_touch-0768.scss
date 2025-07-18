@@ -10,6 +10,13 @@
 			position: absolute;
 			right: 0;
 			bottom: 0;
+			animation:
+				rotateIn 3s ease-in-out infinite,
+				fadeIn 3s ease infinite;
+
+			&-wrapper {
+				animation: slideInBounce 3s linear infinite;
+			}
 		}
 	}
 }

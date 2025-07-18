@@ -12,5 +12,12 @@
 		&__title {
 			padding: 250px 10px 0 571px;
 		}
+		&__cta {
+			// animation-duration: 3s;
+			// animation-timing-function: linear;
+			// animation-iteration-count: infinite;
+			// animation-name: slideIn;
+			animation: slideIn 3s linear;
+		}
 	}
 }

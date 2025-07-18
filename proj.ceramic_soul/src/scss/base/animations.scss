@@ -1,0 +1,50 @@
+@keyframes slideIn {
+	0% {
+		transform: translateX(100%);
+		// opacity: 0;
+	}
+	100% {
+		transform: translateX(0%);
+		// opacity: 1;
+	}
+}
+
+@keyframes rotateIn {
+	0%,
+	50%,
+	100% {
+		transform: rotate(0deg);
+	}
+	25% {
+		transform: rotate(45deg);
+	}
+	75% {
+		transform: rotate(-45deg);
+	}
+}
+
+@keyframes slideInBounce {
+	0%,
+	100% {
+		transform: translateX(0px) translateY(0);
+	}
+	25%,
+	75% {
+		transform: translateX(-150px) translateY(-100px);
+	}
+	50% {
+		transform: translateX(-250px) translateY(0);
+	}
+}
+
+@keyframes fadeIn {
+	0%,
+	50%,
+	100% {
+		opacity: 1;
+	}
+	25%,
+	75% {
+		opacity: 0;
+	}
+}
