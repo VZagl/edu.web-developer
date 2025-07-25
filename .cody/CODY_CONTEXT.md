@@ -121,12 +121,12 @@ function newFunction() {
 - ✅ TypeScript
 - ✅ JavaScript
 - ✅ JSON
+- ✅ Markdown файлы
 - ✅ Все остальные языки по умолчанию
 
 ### Отключено для:
 
 - ❌ Обычный текст (plaintext)
-- ❌ Markdown файлы
 
 ### Параметры производительности:
 
