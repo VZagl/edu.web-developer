@@ -10,13 +10,19 @@
 			position: absolute;
 			right: 0;
 			bottom: 0;
+			/* Применяем анимацию: туда и обратно (alternate), бесконечно */
+			animation: moveBounceRotate 3s infinite alternate;
+			/* 
 			animation:
 				rotateIn 3s ease-in-out infinite,
 				fadeIn 3s ease infinite;
+			*/
 
+			/*
 			&-wrapper {
 				animation: slideInBounce 3s linear infinite;
 			}
+			*/
 		}
 	}
 }

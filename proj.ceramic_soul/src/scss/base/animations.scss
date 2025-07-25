@@ -48,3 +48,25 @@
 		opacity: 0;
 	}
 }
+
+@keyframes moveBounceRotate {
+	0% {
+		transform: translateX(0) translateY(0) rotate(0deg);
+	}
+	25% {
+		/* Двигаемся влево на 62.5px, подпрыгиваем вверх и вращаем вправо */
+		transform: translateX(-62.5px) translateY(-100px) rotate(45deg);
+	}
+	50% {
+		/* Влево на 125px, возвращаемся на землю, без вращения */
+		transform: translateX(-125px) translateY(0) rotate(0deg);
+	}
+	75% {
+		/* Влево на 187.5px, подпрыгиваем вверх и вращаем влево */
+		transform: translateX(-187.5px) translateY(-100px) rotate(-45deg);
+	}
+	100% {
+		/* Влево на 250px, возвращаемся на землю, без вращения */
+		transform: translateX(-250px) translateY(0) rotate(0deg);
+	}
+}
