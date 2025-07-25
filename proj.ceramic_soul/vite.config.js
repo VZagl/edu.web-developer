@@ -1,6 +1,7 @@
 import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { defineConfig } from 'vite';
+import viteImagemin from 'vite-plugin-imagemin';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 
@@ -22,6 +23,7 @@ export default defineConfig({
 	},
 	// Массив плагинов для расширения функциональности Vite
 	plugins: [
+		/**/
 		{
 			// Создаем кастомный плагин для горячей перезагрузки HTML файлов
 			name: 'html-hot-reload', // Имя плагина для идентификации в логах и отладке
@@ -43,5 +45,21 @@ export default defineConfig({
 				// Если файл не HTML, позволяем другим плагинам обработать его
 			},
 		},
+		/**/
+		// Плагин для оптимизации изображений
+		viteImagemin({
+			gifsicle: { optimizationLevel: 7, interlaced: false },
+			optipng: { optimizationLevel: 7 },
+			mozjpeg: { quality: 70 },
+			pngquant: { quality: [0.8, 0.9], speed: 4 },
+			svgo: {
+				plugins: [
+					{ name: 'removeViewBox' },
+					{ name: 'removeEmptyAttrs', active: false },
+				],
+			},
+			verbose: true,
+		}),
+		/**/
 	],
 });

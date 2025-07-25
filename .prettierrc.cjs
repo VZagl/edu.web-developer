@@ -14,7 +14,7 @@ module.exports = {
 	embeddedLanguageFormatting: 'auto',
 	// linebreakStyle: ['off', 'windows'],
 	plugins: [
-		// 'prettier-plugin-organize-imports',
+		'prettier-plugin-organize-imports',
 		'prettier-plugin-organize-attributes',
 		'prettier-plugin-css-order',
 	],
