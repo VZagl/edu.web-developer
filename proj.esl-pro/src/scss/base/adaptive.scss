@@ -1,0 +1,62 @@
+@use '/src/scss/base/variables.scss' as v;
+@use '/src/scss/base/mixins.scss' as m;
+
+.container {
+	display: block;
+	position: relative;
+	margin: 0 auto;
+	padding: 0;
+	max-width: 100%;
+}
+
+section.mobile {
+	display: block;
+	background-color: v.$black;
+	padding: 48px 30px 72px;
+}
+
+section.wide {
+	display: none;
+	background-color: v.$black;
+}
+
+// md: 768
+@include m.media-up(md) {
+	section.mobile {
+		display: none;
+	}
+	section.wide {
+		display: block;
+	}
+	.container {
+		max-width: 720px;
+	}
+}
+
+// lg: 992
+@include m.media-up(lg) {
+	.container {
+		max-width: 960px;
+	}
+}
+
+// xl: 1200
+@include m.media-up(xl) {
+	.container {
+		max-width: 1140px;
+	}
+}
+
+// xxl: 1400
+@include m.media-up(xxl) {
+	.container {
+		max-width: 1140px;
+	}
+}
+
+// xxxl: 1920px,
+@include m.media-up(xxxl) {
+	.container {
+		max-width: 1520px;
+	}
+}
