@@ -33,24 +33,10 @@ section.wide {
 	}
 }
 
-// lg: 992
-@include m.media-up(lg) {
-	.container {
-		max-width: 960px;
-	}
-}
-
-// xl: 1200
-@include m.media-up(xl) {
-	.container {
-		max-width: 1140px;
-	}
-}
-
-// xxl: 1400
+// xxl: 1530
 @include m.media-up(xxl) {
 	.container {
-		max-width: 1140px;
+		max-width: 1130px;
 	}
 }
 
