@@ -12,8 +12,8 @@ ul {
 	margin: 0;
 }
 
-ol[role='list'],
-ul[role='list'] {
+ol,
+ul {
 	padding-inline: 0;
 	list-style: none;
 }

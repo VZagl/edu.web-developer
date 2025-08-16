@@ -20,7 +20,7 @@ section.wide {
 	background-color: v.$black;
 }
 
-// md: 768
+// md: 788
 @include m.media-up(md) {
 	section.mobile {
 		display: none;
@@ -29,7 +29,7 @@ section.wide {
 		display: block;
 	}
 	.container {
-		max-width: 720px;
+		max-width: 740px;
 	}
 }
 
