@@ -30,14 +30,14 @@
 		<meta property="twitter:image" content="https://src/img/star.png" />
 		<meta property="twitter:image:alt" content="ESL Pro League CSGO" />
 		<style>
-			.hidden-on-start {
+			.display-hidden {
 				display: none;
 			}
 		</style>
 	</head>
 	<body>
 		<!-- section: mobile -->
-		<section class="hidden-on-start mobile">
+		<section class="display-hidden mobile">
 			<div class="container">
 				<div class="mobile__wrapper">
 					<!-- card -->
@@ -242,7 +242,7 @@
 		</section>
 
 		<!-- section: wide announcment -->
-		<section class="hidden-on-start wide announcment">
+		<section class="display-hidden wide announcment">
 			<div class="container">
 				<div class="announcment__header">
 					<div class="announcment__header-wrapper">
@@ -289,21 +289,200 @@
 		</section>
 
 		<!-- section: wide schedule -->
-		<section class="hidden-on-start wide schedule">
+		<section class="display-hidden wide schedule">
 			<div class="container">
-				<div class="wide__card"><h1 class="title-h1">schedule</h1></div>
+				<div class="schedule__title">Расписание и результаты</div>
+				<div class="schedule__buttons">
+					<button class="active" id="btn-schedule-matches">Matches</button>
+					<button id="btn-schedule-battles">Battles</button>
+				</div>
+				<!-- schedule__cards -->
+				<div class="schedule__cards-matches">
+					<div class="schedule__cards">
+						<!-- card -->
+						<div class="card">
+							<div class="card__fog foggy">
+								<button class="active">
+									<img src="/src/img/play.svg" alt="button whatch live" />
+									whatch live
+								</button>
+							</div>
+							<div class="card__title">
+								<div class="card__title-text">Asia Minor: Play-Off</div>
+								<div>
+									<div class="card__title-date">29 Oct</div>
+									<div class="card__title-time">19:00</div>
+								</div>
+							</div>
+							<div class="card__content">
+								<div class="card__content-logos">
+									<img src="/src/img/team-logos/a.png" alt="team1" />
+									<img src="/src/img/team-logos/noping.png" alt="forze" />
+								</div>
+								<div class="card__content-team">
+									<div class="card__content-team-name">Jenny Bell</div>
+									<div class="card__content-team-score">3.22</div>
+								</div>
+								<div class="card__content-team">
+									<div class="card__content-team-name">Arlene Robertson</div>
+									<div class="card__content-team-score">53.22</div>
+								</div>
+								<div class="card__content-starts">
+									<span class="card__content-starts-text"
+										>Starts in: 5 hours 39 min • Bо 3</span
+									>
+									<img src="/src/img/ggbet.png" alt="ggbet" />
+								</div>
+							</div>
+						</div>
+						<!-- card -->
+						<div class="card">
+							<div class="card__fog">
+								<button class="active">
+									<img src="/src/img/play.svg" alt="button whatch live" />
+									whatch live
+								</button>
+							</div>
+							<div class="card__title">
+								<div class="card__title-text">Asia Minor: Play-Off</div>
+								<div>
+									<div class="card__title-date">29 Oct</div>
+									<div class="card__title-time">19:00</div>
+								</div>
+							</div>
+							<div class="card__content">
+								<div class="card__content-logos">
+									<img src="/src/img/team-logos/team1.png" alt="team1" />
+									<img src="/src/img/team-logos/forze.png" alt="forze" />
+								</div>
+								<div class="card__content-team">
+									<div class="card__content-team-name">Regina Watson</div>
+									<div class="card__content-team-score">3.22</div>
+								</div>
+								<div class="card__content-team">
+									<div class="card__content-team-name">Kathryn Jones</div>
+									<div class="card__content-team-score">53.22</div>
+								</div>
+								<div class="card__content-starts">
+									<span class="card__content-starts-text"
+										>Starts in: 5 hours 39 min • Bо 3</span
+									>
+									<img src="/src/img/ggbet.png" alt="ggbet" />
+								</div>
+							</div>
+						</div>
+						<!-- card -->
+						<div class="card">
+							<div class="card__fog">
+								<button class="active">
+									<img src="/src/img/play.svg" alt="button whatch live" />
+									whatch live
+								</button>
+							</div>
+							<div class="card__title">
+								<div class="card__title-text">Asia Minor: Play-Off</div>
+								<div>
+									<div class="card__title-date">29 Oct</div>
+									<div class="card__title-time">19:00</div>
+								</div>
+							</div>
+							<div class="card__content">
+								<div class="card__content-logos">
+									<img src="/src/img/team-logos/boom.png" alt="team1" />
+									<img src="/src/img/team-logos/a-star.png" alt="forze" />
+								</div>
+								<div class="card__content-team">
+									<div class="card__content-team-name">Ricardo Hawkins</div>
+									<div class="card__content-team-score">3.22</div>
+								</div>
+								<div class="card__content-team">
+									<div class="card__content-team-name">Bruce Simmons</div>
+									<div class="card__content-team-score">53.22</div>
+								</div>
+								<div class="card__content-starts">
+									<span class="card__content-starts-text"
+										>Starts in: 5 hours 39 min • Bо 3</span
+									>
+									<img src="/src/img/ggbet.png" alt="ggbet" />
+								</div>
+							</div>
+						</div>
+						<!-- card -->
+						<div class="card">
+							<div class="card__fog">
+								<button class="active">
+									<img src="/src/img/play.svg" alt="button whatch live" />
+									whatch live
+								</button>
+							</div>
+							<div class="card__title">
+								<div class="card__title-text">Asia Minor: Play-Off</div>
+								<div>
+									<div class="card__title-date">29 Oct</div>
+									<div class="card__title-time">19:00</div>
+								</div>
+							</div>
+							<div class="card__content">
+								<div class="card__content-logos">
+									<img src="/src/img/team-logos/a.png" alt="team1" />
+									<img src="/src/img/team-logos/noping.png" alt="forze" />
+								</div>
+								<div class="card__content-team">
+									<div class="card__content-team-name">Jenny Bell</div>
+									<div class="card__content-team-score">3.22</div>
+								</div>
+								<div class="card__content-team">
+									<div class="card__content-team-name">Arlene Robertson</div>
+									<div class="card__content-team-score">53.22</div>
+								</div>
+								<div class="card__content-starts">
+									<span class="card__content-starts-text"
+										>Starts in: 5 hours 39 min • Bо 3</span
+									>
+									<img src="/src/img/ggbet.png" alt="ggbet" />
+								</div>
+							</div>
+						</div>
+						<!--  -->
+					</div>
+					<div class="schedule__paginator">
+						<button
+							class="schedule__paginator-button schedule__paginator-button--prev"
+						>
+							<img src="/src/img/arrow.svg" alt="previous" />
+						</button>
+						<div class="schedule__paginator-dots">
+							<span class="active"></span> <span></span><span></span>
+						</div>
+						<button
+							class="schedule__paginator-button schedule__paginator-button--next"
+						>
+							<img src="/src/img/arrow.svg" alt="next" />
+						</button>
+					</div>
+				</div>
+				<div class="schedule__cards-battles display-hidden">
+					<div class="schedule__cards">
+						<!-- card -->
+						<div class="wide__card">
+							<h1 class="title-h1">schedule__cards-battles</h1>
+						</div>
+						<!--  -->
+					</div>
+				</div>
+				<!-- schedule__cards -->
 			</div>
 		</section>
 
 		<!-- section: wide events -->
-		<section class="hidden-on-start wide events">
+		<section class="display-hidden wide events">
 			<div class="container">
 				<div class="wide__card"><h1 class="title-h1">events</h1></div>
 			</div>
 		</section>
 
 		<!-- section: wide participants -->
-		<section class="hidden-on-start wide participants">
+		<section class="display-hidden wide participants">
 			<div class="container">
 				<div class="wide__card"><h1 class="title-h1">participants</h1></div>
 			</div>

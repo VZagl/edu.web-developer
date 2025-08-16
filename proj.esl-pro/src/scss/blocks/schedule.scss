@@ -2,4 +2,272 @@
 @use '/src/scss/base/mixins.scss' as m;
 
 .schedule {
+	padding: 140px 0 152px;
+
+	&__title {
+		border-bottom: 1px solid v.$yellow;
+		padding-bottom: 40px;
+		color: v.$white;
+		font-weight: 700;
+		font-size: 32px;
+		line-height: 141%;
+	}
+	&__buttons {
+		display: flex;
+		flex-direction: row;
+		justify-content: flex-start;
+		align-items: flex-start;
+		// gap: 35px;
+
+		button {
+			cursor: pointer;
+			border: 1px solid v.$yellow;
+			background-color: v.$black;
+			padding: 15px 31px;
+			width: 152px;
+			height: 60px;
+			color: v.$white;
+			font-weight: 700;
+			font-size: 18px;
+			line-height: 167%;
+			letter-spacing: 0.01em;
+
+			&.active {
+				background-color: v.$yellow;
+			}
+		}
+	}
+	&__cards {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		gap: 40px;
+
+		&-matches {
+			padding: 89px 0 152px;
+
+			.card {
+				display: block;
+				position: relative;
+				border-radius: 10px;
+				background-color: v.$dark;
+				padding: 30px 35px 30px 30px;
+				width: 350px;
+				height: 341px;
+
+				&__fog {
+					display: none;
+					position: absolute;
+					top: 0;
+					left: 0;
+					justify-content: center;
+					align-items: center;
+					box-shadow:
+						0 10px 10px rgba(v.$yellow, 0.5),
+						10px 0 10px rgba(v.$yellow, 0.5),
+						-10px 0 10px rgba(v.$yellow, 0.5);
+					border-radius: 10px;
+					background-color: rgba(0, 0, 0, 0.5);
+					width: 100%;
+					height: 100%;
+
+					&.foggy {
+						display: flex;
+					}
+
+					button {
+						display: flex;
+						flex-direction: row;
+						justify-content: center;
+						align-items: center;
+						gap: 10px;
+						cursor: pointer;
+						border: none;
+						background-color: v.$yellow;
+						width: 170px;
+						height: 50px;
+						color: v.$white;
+						font-weight: 600;
+						font-size: 16px;
+						letter-spacing: 0.01em;
+						text-transform: uppercase;
+
+						img {
+							width: 24px;
+							height: 24px;
+						}
+					}
+				}
+
+				&__title {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					align-items: center;
+					margin-right: 16px;
+
+					&-text {
+						color: v.$white;
+						font-weight: 400;
+						font-size: 14px;
+						line-height: 143%;
+						letter-spacing: 0.01em;
+					}
+					&-date {
+						color: v.$white;
+						font-weight: 400;
+						font-size: 12px;
+						line-height: 167%;
+						letter-spacing: 0.01em;
+						text-align: center;
+					}
+					&-time {
+						color: v.$white;
+						font-weight: 700;
+						font-size: 18px;
+						line-height: 111%;
+						letter-spacing: 0.01em;
+						text-align: right;
+					}
+				}
+				&__content {
+					display: flex;
+					flex-direction: column;
+					justify-content: space-between;
+					align-items: stretch;
+					gap: 15px;
+					margin: 19px 0 0 5px;
+					border-top: 1px solid v.$yellow;
+					padding-top: 36px;
+
+					&-logos {
+						display: flex;
+						flex-direction: row;
+						justify-content: flex-start;
+						align-items: center;
+						gap: 20px;
+
+						img {
+							width: 50px;
+							height: 50px;
+						}
+					}
+					&-team {
+						display: flex;
+						flex-direction: row;
+						justify-content: space-between;
+						align-items: center;
+
+						&-name {
+							color: v.$white;
+							font-weight: 700;
+							font-size: 20px;
+							line-height: 175%;
+						}
+						&-score {
+							border: 1px solid v.$yellow;
+							padding: 5px 10px;
+							width: 58px;
+							height: 30px;
+							color: v.$white;
+							font-weight: 700;
+							font-size: 14px;
+							line-height: 143%;
+							letter-spacing: 0.02em;
+							text-align: center;
+							text-transform: uppercase;
+						}
+					}
+					&-starts {
+						display: flex;
+						flex-direction: row;
+						justify-content: space-between;
+						align-items: center;
+
+						&-text {
+							color: v.$grey;
+							font-weight: 400;
+							font-size: 12px;
+							line-height: 167%;
+							letter-spacing: 0.01em;
+						}
+						img {
+							width: 58px;
+							height: 15px;
+						}
+					}
+				}
+			}
+		}
+		&-battles {
+		}
+	}
+	&__paginator {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 50px;
+		margin-top: 55px;
+
+		&-button {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			cursor: pointer;
+			border: 1px solid v.$yellow;
+			border-radius: 50%;
+			background-color: v.$black;
+			// padding: 10px 20px;
+			width: 85px;
+			height: 85px;
+			color: v.$white;
+
+			&--next {
+				transform: rotate(180deg);
+			}
+			img {
+				width: 44px;
+			}
+		}
+		&-dots {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			gap: 18px;
+
+			span {
+				cursor: pointer;
+				border-radius: 50%;
+				background-color: v.$grey;
+				width: 15px;
+				height: 15px;
+
+				&.active {
+					background-color: v.$yellow;
+				}
+			}
+		}
+	}
+
+	// xxl: 1530
+	@include m.media-down(xxl) {
+		&__cards {
+			.card:nth-child(3) {
+				display: none;
+			}
+		}
+	}
+
+	// xxxl: 1920px,
+	@include m.media-down(xxxl) {
+		&__cards {
+			.card {
+				&:nth-child(4) {
+					display: none;
+				}
+			}
+		}
+	}
 }
