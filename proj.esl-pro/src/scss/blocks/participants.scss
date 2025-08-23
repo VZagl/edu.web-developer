@@ -1,0 +1,118 @@
+@use '/src/scss/base/variables.scss' as v;
+@use '/src/scss/base/mixins.scss' as m;
+
+.participants {
+	background: url('/src/img/bg/bg2.jpg') no-repeat top left;
+	background-size: 1920px 1324px;
+	padding-top: 510px;
+	min-height: 1324px;
+	color: v.$white;
+
+	&__wrapper {
+		margin: 0 0 0 auto;
+		width: 652px;
+	}
+	&__title {
+		color: v.$white;
+		font-weight: 700;
+		font-size: 32px;
+		line-height: 141%;
+		text-align: center;
+	}
+	&__subtitle {
+		color: v.$white;
+		font-weight: 700;
+		font-size: 25px;
+		line-height: 180%;
+		text-align: center;
+	}
+	&__table {
+		display: grid;
+		grid-template-columns: 72px 580px;
+		grid-auto-rows: 55px;
+		/* центрируем содержимое ячеек по вертикали */
+		align-items: center;
+		/* по умолчанию ячейки растягиваются по горизонтали */
+		justify-items: stretch;
+		gap: 0;
+		margin-top: 2px;
+		background-color: v.$dark;
+		color: v.$white;
+
+		&-npp {
+			display: grid;
+			place-items: center; /* центрирует содержимое по вертикали и горизонтали */
+			box-sizing: border-box;
+			border: 1px solid v.$yellow;
+			/* ячейка занимает всю площадь grid-ячейки (граница — по всей области),
+			   а контент внутри центрируем с помощью grid на самой ячейке */
+			width: 100%;
+			height: 100%;
+			color: v.$white;
+			font-weight: 400;
+			font-size: 20px;
+			line-height: 175%;
+
+			&-header {
+				display: grid;
+				place-items: center;
+				background-color: v.$yellow;
+				width: 100%;
+				height: 100%;
+				color: v.$black;
+				font-weight: 400;
+				font-size: 20px;
+				line-height: 175%;
+			}
+		}
+		&-team {
+			display: grid;
+			align-items: center;
+			border: 1px solid v.$yellow;
+			width: 100%;
+			height: 100%;
+			color: v.$white;
+			font-weight: 500;
+			font-size: 20px;
+			line-height: 175%;
+
+			&-header {
+				display: grid;
+				align-items: center;
+				background-color: v.$yellow;
+				padding-left: 10px;
+				width: 100%;
+				height: 100%;
+				color: v.$black;
+				font-weight: 500;
+				font-size: 20px;
+				line-height: 175%;
+			}
+		}
+
+		&-team {
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			gap: 10px;
+			padding-left: 20px;
+		}
+	}
+	&__buttons {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+		gap: 30px;
+		margin-top: 65px;
+
+		button {
+			cursor: pointer;
+			border: none;
+			background: transparent;
+			color: v.$white;
+			font-weight: 700;
+			font-size: 20px;
+			line-height: 175%;
+		}
+	}
+}

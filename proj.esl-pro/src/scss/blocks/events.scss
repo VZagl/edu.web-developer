@@ -1,0 +1,130 @@
+@use '/src/scss/base/variables.scss' as v;
+@use '/src/scss/base/mixins.scss' as m;
+
+section.events {
+	background-color: v.$yellow;
+	min-height: 519px;
+}
+
+.events {
+	&__wrapper {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		align-items: flex-start;
+		gap: 132px;
+		padding: 115px 0 111px;
+		max-width: 100%;
+	}
+	&__content {
+		&-left {
+			width: 608px;
+			min-height: 175px;
+
+			&-title {
+				margin-top: 30px;
+				color: v.$black;
+				font-weight: 700;
+				font-size: 32px;
+				line-height: 109%;
+			}
+
+			&-description {
+				margin-top: 20px;
+				color: v.$black;
+				font-weight: 500;
+				font-size: 18px;
+				line-height: 167%;
+				letter-spacing: 0.01em;
+
+				span {
+					color: v.$white;
+				}
+			}
+		}
+		&-right {
+			width: 780px;
+			min-height: 165px;
+
+			&-stages {
+				display: flex;
+				position: relative;
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: center;
+				gap: 58px;
+			}
+			&-stage {
+				position: relative;
+				width: 221px;
+
+				img {
+					margin: 0 auto;
+					width: 80px;
+					height: 80px;
+				}
+
+				/* линия между текущим и следующим stage */
+				&:not(:last-child)::after {
+					position: absolute;
+					top: 50%;
+					left: calc(100% - 9px);
+					transform: translateY(-50%);
+					background-color: v.$white;
+					width: 78px;
+					height: 4px;
+					content: '';
+				}
+			}
+			&-title {
+				margin-top: 30px;
+				color: v.$black;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 156%;
+				letter-spacing: 0.01em;
+				text-align: center;
+			}
+			.active {
+				font-weight: 700;
+			}
+			&-time {
+				margin-top: 2px;
+				color: v.$black;
+				font-weight: 400;
+				font-size: 16px;
+				line-height: 156%;
+				letter-spacing: 0.01em;
+				text-align: center;
+			}
+			&-buttons {
+				display: flex;
+				flex-direction: row;
+				justify-content: space-around;
+				align-items: center;
+				margin-top: 68px;
+
+				button {
+					display: flex;
+					flex-direction: row;
+					justify-content: center;
+					align-items: center;
+					gap: 10px;
+					cursor: pointer;
+					border: none;
+					border-radius: 5px;
+					background-color: v.$white;
+					padding: 10px;
+					width: 341px;
+					height: 60px;
+					color: v.$black;
+					font-weight: 600;
+					font-size: 16px;
+					line-height: 156%;
+					letter-spacing: 0.01em;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+@use '/src/scss/libs/modern-normalize.min.css';
+@use '/src/scss/libs/grids-min.css';
+@use '/src/scss/libs/grids-responsive-min.css';
+
+@use '/src/scss/base/fonts.scss';
+@use '/src/scss/base/common_first.scss';
+// @use '/src/scss/base/animations.scss';
+@use '/src/scss/base/adaptive.scss';
+
+@use '/src/scss/ui/titles.scss';
+@use '/src/scss/ui/buttons.scss';
+// @use '/src/scss/ui/forms.scss';
+
+// @use '/src/scss/blocks/header.scss';
+// @use '/src/scss/blocks/footer.scss';
+
+@use '/src/scss/blocks/mobile.scss'; // мобильная версия
+@use '/src/scss/blocks/announcment.scss'; // анонс
+@use '/src/scss/blocks/schedule.scss'; // расписание
+@use '/src/scss/blocks/events.scss'; // события
+@use '/src/scss/blocks/participants.scss'; // участники
+
+// @use '/src/scss/base/common_last.scss';
