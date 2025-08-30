@@ -1,0 +1,11 @@
+@use 'styles/variables.scss' as v;
+@use 'styles/mixins.scss' as m;
+
+.circle {
+	&-big {
+		@include m.before_circle(36px);
+	}
+	&-small {
+		@include m.before_circle(15px);
+	}
+}

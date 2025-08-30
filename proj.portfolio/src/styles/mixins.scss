@@ -35,45 +35,44 @@
 // Миксин для media queries - END
 
 @mixin title {
-	color: v.$dark;
-	font-style: normal;
-	font-weight: 500;
-	line-height: normal;
-	text-align: center;
-	text-transform: uppercase;
+	z-index: 1;
+	color: v.$black;
+	font-weight: 700;
+	font-size: 26px;
 }
 
 @mixin button {
-	display: block;
+	display: inline-block;
 	cursor: pointer;
-	border: 1px solid v.$dark;
-	border-radius: 2px;
+	border: none;
 	background-color: transparent;
-	padding: 0 10px;
-	color: v.$dark;
-	font-style: normal;
-	font-weight: 400;
-	line-height: normal;
-	text-align: center;
-	text-transform: uppercase;
+	padding: 1px;
+	color: v.$black;
+	font-weight: 700;
+	font-size: 14px;
+	text-decoration: none;
+
+	&:hover {
+		color: v.$black;
+		text-decoration: none;
+	}
 }
-/*
-@mixin angle-decoration {
-	&::after,
+
+@mixin before_circle($size: 36px) {
+	position: relative;
+	z-index: 2;
+	padding-left: 10px;
+
 	&::before {
+		display: block;
 		position: absolute;
-		top: 0;
+		top: -25%;
 		left: 0;
-		background-color: v.$dark;
+		z-index: -1;
+		border-radius: 50%;
+		background-color: v.$primary;
+		width: $size;
+		height: $size;
 		content: '';
 	}
-	&::after {
-		width: 200px;
-		height: 1px;
-	}
-	&::before {
-		width: 1px;
-		height: 200px;
-	}
 }
-*/
