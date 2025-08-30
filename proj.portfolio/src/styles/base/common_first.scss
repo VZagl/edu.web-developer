@@ -1,4 +1,4 @@
-@use '/src/scss/base/variables.scss' as v;
+@use 'styles/variables.scss' as v;
 
 h1,
 h2,
@@ -38,7 +38,8 @@ html {
 }
 
 body {
-	background-color: v.$dark;
+	background-color: v.$white;
+	color: v.$black;
 }
 
 // .just-validate-error-label {
