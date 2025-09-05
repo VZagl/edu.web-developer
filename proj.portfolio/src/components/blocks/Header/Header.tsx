@@ -4,12 +4,7 @@ import './Header.scss';
 export function Header() {
 	console.log('## Header: render');
 	return (
-		<section className='header'>
-			<div className='hamburger'>
-				<span></span>
-				<span></span>
-				<span></span>
-			</div>
+		<section className='header' id='header'>
 			<div className='container'>
 				<Title type={3} className='circle-big'>
 					Меня зовут Александра Смит

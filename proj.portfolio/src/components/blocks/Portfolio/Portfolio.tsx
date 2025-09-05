@@ -1,7 +1,7 @@
 export function Portfolio() {
 	console.log('## Portfolio: render');
 	return (
-		<section className='portfolio'>
+		<section className='portfolio' id='portfolio'>
 			<div className='container'>
 				<h1>Portfolio Component</h1>
 			</div>

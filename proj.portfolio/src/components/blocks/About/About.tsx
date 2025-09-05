@@ -1,7 +1,7 @@
 export function About() {
 	console.log('## About: render');
 	return (
-		<section className='about'>
+		<section className='about' id='about'>
 			<div className='container'>
 				<h1>About Component</h1>
 			</div>
