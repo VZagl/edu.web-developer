@@ -1,5 +1,4 @@
-import { Button } from 'components/ui/Button';
-import { Title } from 'components/ui/Title';
+import { Button, Title } from 'components/ui/';
 import './Header.scss';
 
 export function Header() {
