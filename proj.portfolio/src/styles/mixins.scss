@@ -34,23 +34,6 @@
 }
 // Миксин для media queries - END
 
-@mixin button {
-	display: inline-block;
-	cursor: pointer;
-	border: none;
-	background-color: transparent;
-	padding: 1px;
-	color: v.$black;
-	font-weight: 700;
-	font-size: 14px;
-	text-decoration: none;
-
-	&:hover {
-		color: v.$black;
-		text-decoration: none;
-	}
-}
-
 @mixin before_circle($size: 36px) {
 	position: relative;
 	z-index: 2;

@@ -1,0 +1,29 @@
+@use 'styles/variables.scss' as v;
+@use 'styles/mixins.scss' as m;
+
+@mixin m_button {
+	display: inline-block;
+	cursor: pointer;
+	border: none;
+	background-color: transparent;
+	padding: 1px;
+	color: v.$black;
+	font-weight: 700;
+	font-size: 14px;
+	text-decoration: none;
+
+	&:hover {
+		color: v.$black;
+		text-decoration: none;
+	}
+}
+
+.button {
+	@include m_button;
+
+	&.primary {
+		box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+		background-color: v.$primary;
+		padding: 12px 27px;
+	}
+}

@@ -1,3 +1,4 @@
+import { Button } from 'components/ui/Button';
 import { Title } from 'components/ui/Title';
 import './Header.scss';
 
@@ -16,12 +17,10 @@ export function Header() {
 				</Title>
 				<Title titleType={1}>Я web-разработчик из города Москва</Title>
 				<div className='buttons-wrapper'>
-					<a className='button-primary' href='#portfolio'>
+					<Button type='primary' href='#portfolio'>
 						Портфолио
-					</a>
-					<a className='button' href='#about'>
-						Про меня
-					</a>
+					</Button>
+					<Button href='#about'>Про меня</Button>
 				</div>
 			</div>
 		</section>
