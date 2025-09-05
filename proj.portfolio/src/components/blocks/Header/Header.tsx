@@ -12,10 +12,10 @@ export function Header() {
 				<span></span>
 			</div>
 			<div className='container'>
-				<Title titleType={3} className='circle-big'>
+				<Title type={3} className='circle-big'>
 					Меня зовут Александра Смит
 				</Title>
-				<Title titleType={1}>Я web-разработчик из города Москва</Title>
+				<Title type={1}>Я web-разработчик из города Москва</Title>
 				<div className='buttons-wrapper'>
 					<Button type='primary' href='#portfolio'>
 						Портфолио
