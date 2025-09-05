@@ -34,13 +34,6 @@
 }
 // Миксин для media queries - END
 
-@mixin title {
-	z-index: 1;
-	color: v.$black;
-	font-weight: 700;
-	font-size: 26px;
-}
-
 @mixin button {
 	display: inline-block;
 	cursor: pointer;

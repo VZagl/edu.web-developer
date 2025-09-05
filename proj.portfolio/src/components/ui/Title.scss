@@ -1,0 +1,37 @@
+@use 'styles/variables.scss' as v;
+@use 'styles/mixins.scss' as m;
+
+@mixin m_title {
+	z-index: 1;
+	color: v.$black;
+	font-weight: 700;
+	font-size: 26px;
+}
+
+.title {
+	@include m_title;
+
+	&--h1 {
+		font-size: 26px;
+	}
+	&--h2 {
+		font-size: 24px;
+	}
+	&--h3 {
+		font-size: 16px;
+	}
+}
+
+// xl: 1200px,
+@include m.media-up(xl) {
+	.title {
+		&--h1 {
+			font-size: 48px;
+			line-height: 125%;
+		}
+		&--h2 {
+			font-size: 36px;
+			line-height: 167%;
+		}
+	}
+}
