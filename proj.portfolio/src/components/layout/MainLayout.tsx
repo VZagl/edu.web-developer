@@ -1,6 +1,7 @@
 import {
 	About,
 	Benefit,
+	BurgerMenu,
 	Contacts,
 	Header,
 	Portfolio,
@@ -14,6 +15,7 @@ export function MainLayout() {
 	console.log('## MainLayout: render');
 	return (
 		<div className='main-layout'>
+			<BurgerMenu />
 			<Sidepanel />
 			<Header />
 			<About />
