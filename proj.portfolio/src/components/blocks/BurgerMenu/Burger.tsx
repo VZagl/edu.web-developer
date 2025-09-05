@@ -1,37 +1,40 @@
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import './Burger.scss';
 
-export function Burger() {
-	const [burger, setBurger] = useState<Element | null>(null);
-	const [burgerMenu, setburgerMenu] = useState<Element | null>(null);
+interface i_BurgerProps {
+	onMenuOpenClick: () => void;
+}
 
-	const onBurgerClick = useCallback(() => {
-		burgerMenu?.classList.add('active');
-		if (!document.body.classList.contains('scroll-off')) {
-			document.body.classList.add('scroll-off');
-		}
-	}, [burgerMenu]);
+/**
+ * Renders a burger menu icon component.
+ *
+ * @param onMenuOpenClick - Callback function invoked when the burger menu is clicked.
+ *
+ * The component attaches a click event listener to the burger menu element using a ref.
+ * When clicked, it triggers the provided `onMenuOpenClick` handler.
+ *
+ * @remarks
+ * - The event listener is added and removed using a `useEffect` hook to ensure proper cleanup.
+ * - The burger menu consists of three `<span>` elements for visual representation.
+ */
+export function Burger({ onMenuOpenClick }: i_BurgerProps) {
+	const burgerRef = useRef<HTMLDivElement>(null);
 
 	useEffect(() => {
-		const m_burger = document.querySelector('.burger');
-		const m_burgerMenu = document.querySelector('.burger-menu');
-		setburgerMenu(m_burgerMenu);
-		setBurger(m_burger);
-	}, []);
+		const burger = burgerRef.current;
 
-	useEffect(() => {
-		burger?.addEventListener('click', onBurgerClick);
+		burger?.addEventListener('click', onMenuOpenClick);
 
 		return () => {
-			burger?.removeEventListener('click', onBurgerClick);
+			burger?.removeEventListener('click', onMenuOpenClick);
 		};
-	}, [burger, onBurgerClick]);
+	}, [onMenuOpenClick]);
 
 	console.log('## Burger: render');
 	return (
-		<div className='burger'>
+		<div className='burger' ref={burgerRef}>
 			<span></span>
-			<span></span>
+			<span className='long'></span>
 			<span></span>
 		</div>
 	);

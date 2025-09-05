@@ -1,88 +1,72 @@
-import { useCallback, useEffect } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 import { Burger } from './Burger';
 import './BurgerMenu.scss';
+import { BurgerMenuLink } from './BurgerMenuLink';
+
+const menuLinks = [
+	{ key: 'about', href: '#about', text: 'ПРО МЕНЯ' },
+	{ key: 'benefit', href: '#benefit', text: 'МОЙ ОПЫТ' },
+	{ key: 'skills', href: '#skills', text: 'МОИ НАВЫКИ' },
+	{ key: 'portfolio', href: '#portfolio', text: 'МОИ РАБОТЫ' },
+	{ key: 'price-list', href: '#price-list', text: 'ПРАЙС-ЛИСТ' },
+	{ key: 'contakts', href: '#contakts', text: 'КОНТАКТЫ' },
+];
 
 export function BurgerMenu() {
-	const onBurgerMenuCloseClick = useCallback((burgerMenu: Element | null) => {
-		console.log('## onBurgerMenuCloseClick');
-		burgerMenu?.classList.remove('active');
-		if (document.body.classList.contains('scroll-off')) {
-			document.body.classList.remove('scroll-off');
-		}
+	const menuRef = useRef<HTMLDivElement>(null);
+	const fogRef = useRef<HTMLDivElement>(null);
+	const closeRef = useRef<HTMLImageElement>(null);
+
+	const onMenuCloseClick = useCallback(() => {
+		menuRef.current?.classList.remove('active');
+		fogRef.current?.classList.remove('active');
+		document.body.classList.remove('scroll-off');
+	}, []);
+
+	const onMenuOpenClick = useCallback(() => {
+		menuRef.current?.classList.add('active');
+		fogRef.current?.classList.add('active');
+		document.body.classList.add('scroll-off');
 	}, []);
 
 	useEffect(() => {
-		const burgerMenuClose = document.querySelector('.burger-menu__close');
-		const burgerMenu = document.querySelector('.burger-menu');
-		const menuItems = document.querySelectorAll('.burger-menu__link');
+		const closeButton = closeRef.current;
 
-		burgerMenuClose?.addEventListener('click', () =>
-			onBurgerMenuCloseClick(burgerMenu)
-		);
-		menuItems.forEach((item) =>
-			item.addEventListener('click', () => onBurgerMenuCloseClick(burgerMenu))
-		);
+		closeButton?.addEventListener('click', onMenuCloseClick);
 
 		return () => {
-			burgerMenuClose?.removeEventListener('click', () =>
-				onBurgerMenuCloseClick(burgerMenu)
-			);
-			menuItems.forEach((item) =>
-				item.removeEventListener('click', () =>
-					onBurgerMenuCloseClick(burgerMenu)
-				)
-			);
+			closeButton?.removeEventListener('click', onMenuCloseClick);
 		};
-		// eslint-disable-next-line react-hooks/exhaustive-deps
-	}, []);
+	}, [onMenuCloseClick]);
+
+	function renderMenuLinks(onMenuCloseClick: () => void) {
+		return menuLinks.map((link) => (
+			<BurgerMenuLink
+				key={link.key}
+				href={link.href}
+				text={link.text}
+				onMenuCloseClick={onMenuCloseClick}
+			/>
+		));
+	}
 
 	console.log('## BurgerMenu: render');
 	return (
 		<>
-			<Burger />
+			<Burger onMenuOpenClick={onMenuOpenClick} />
 			<section className='burger-menu'>
-				<div className='burger-menu__fog'></div>
-				<div className='burger-menu__wrapper'>
+				<div className='burger-menu__fog' ref={fogRef}></div>
+				<div className='burger-menu__wrapper' ref={menuRef}>
 					<div className='burger-menu__close-wrapper'>
 						<img
 							className='burger-menu__close'
 							src='/assets/icons/Close.svg'
 							alt='Close'
+							ref={closeRef}
 						/>
 					</div>
 					<nav className='burger-menu__nav'>
-						<ul>
-							<li>
-								<a className='burger-menu__link' href='#about'>
-									ПРО МЕНЯ
-								</a>
-							</li>
-							<li>
-								<a className='burger-menu__link' href='#benefit'>
-									МОЙ ОПЫТ
-								</a>
-							</li>
-							<li>
-								<a className='burger-menu__link' href='#skills'>
-									МОИ НАВЫКИ
-								</a>
-							</li>
-							<li>
-								<a className='burger-menu__link' href='#portfolio'>
-									МОИ РАБОТЫ
-								</a>
-							</li>
-							<li>
-								<a className='burger-menu__link' href='#price-list'>
-									ПРАЙС-ЛИСТ
-								</a>
-							</li>
-							<li>
-								<a className='burger-menu__link' href='#contakts'>
-									КОНТАКТЫ
-								</a>
-							</li>
-						</ul>
+						<ul>{renderMenuLinks(onMenuCloseClick)}</ul>
 					</nav>
 					<div className='burger-menu__social'>
 						<a href='#'>

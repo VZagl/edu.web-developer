@@ -1,0 +1,30 @@
+@use 'styles/variables.scss' as v;
+
+.burger-menu__link {
+	position: relative;
+	padding-left: 35px;
+	font-weight: 700;
+	font-size: 24px;
+
+	&::before {
+		display: block;
+		position: absolute;
+		top: 11px;
+		left: 0;
+		transition: all 0.5s linear;
+		border: 1px solid v.$black;
+		border-radius: 50%;
+		background-color: transparent;
+		width: 15px;
+		height: 15px;
+		content: '';
+	}
+	&:hover::before {
+		background-color: v.$white;
+	}
+	a {
+		color: v.$white;
+		text-decoration: none;
+		text-transform: uppercase;
+	}
+}

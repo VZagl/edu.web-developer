@@ -2,32 +2,42 @@
 @use 'styles/mixins.scss' as m;
 
 .burger-menu {
-	display: none;
+	display: block;
 
-	&.active {
-		display: block;
-	}
 	&__fog {
+		display: block;
 		position: fixed;
 		top: 0;
 		right: 0;
 		bottom: 0;
 		left: 0;
-		opacity: 1;
+		opacity: 0;
 		z-index: 20;
-		backdrop-filter: blur(2px);
-		background-color: rgba(255, 255, 255, 0.5);
+		backdrop-filter: blur(1px);
+		transition: all 0.5s linear;
+		background-color: rgba(v.$white, 0.75);
+		pointer-events: none;
+
+		&.active {
+			opacity: 1;
+			pointer-events: auto;
+		}
 	}
 	&__wrapper {
 		display: block;
 		position: fixed;
 		top: 0;
-		left: 0;
+		left: -250px;
 		z-index: 30;
+		transition: all 0.5s ease-in-out;
 		background-color: v.$primary;
 		padding: 25px 25px 50px 20px;
 		width: 250px;
 		height: 100vh;
+
+		&.active {
+			left: 0;
+		}
 	}
 	&__close {
 		cursor: pointer;
@@ -48,35 +58,12 @@
 			gap: 15px;
 			list-style: none;
 		}
-		li {
-			text-transform: uppercase;
-		}
 	}
-	&__link {
-		position: relative;
-		z-index: 2;
-		padding-left: 35px;
-		color: v.$white;
-		font-weight: 700;
-		font-size: 24px;
 
-		&::before {
-			display: block;
-			position: absolute;
-			top: 10px;
-			left: 0;
-			border: 1px solid v.$black;
-			border-radius: 50%;
-			background-color: transparent;
-			width: 15px;
-			height: 15px;
-			content: '';
-		}
-	}
 	&__social {
 		display: flex;
 		position: absolute;
-		bottom: 30px;
+		bottom: 50px;
 		left: 0;
 		justify-content: center;
 		align-items: center;
@@ -95,6 +82,7 @@
 @include m.media-up(xl) {
 	.burger-menu {
 		&__wrapper {
+			left: -345px;
 			padding-left: 40px;
 			width: 345px;
 		}
