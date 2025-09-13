@@ -9,6 +9,10 @@
 	}
 	.title--h3 {
 		margin-top: 6px;
+		padding-left: 12px;
+	}
+	.divider {
+		margin: 0;
 	}
 	&__wrapper {
 		display: flex;
@@ -25,22 +29,10 @@
 		width: 100%;
 	}
 	&__text {
-		position: relative;
-		margin-top: 15px;
-		padding-top: 20px;
+		margin-top: 20px;
 		color: v.$black;
 		font-weight: 500;
 		font-size: 14px;
-
-		&::before {
-			position: absolute;
-			top: 0;
-			left: 2px;
-			background-color: v.$primary;
-			width: 60px;
-			height: 3px;
-			content: '';
-		}
 	}
 	&__cards {
 		display: flex;

@@ -18,6 +18,7 @@ export function About() {
 							Про меня
 						</Title>
 						<Title type={2}>Меня зовут Александра</Title>
+						<div className='divider'></div>
 						<p className='about__text'>
 							Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
 							eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
