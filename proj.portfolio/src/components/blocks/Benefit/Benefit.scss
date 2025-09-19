@@ -1,0 +1,93 @@
+@use 'styles/variables.scss' as v;
+@use 'styles/mixins.scss' as m;
+
+.benefit {
+	padding-top: 40px;
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.title--h3 {
+		margin-top: 6px;
+		padding: 0;
+
+		&::before {
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
+	.title--h2 {
+		margin-top: 26px;
+	}
+	.divider {
+		margin-top: 15px;
+	}
+	&__cards {
+		display: flex;
+		row-gap: 40px;
+		flex-direction: column;
+		justify-content: space-between;
+		margin-top: 40px;
+		width: 100%;
+
+		&-wrapper {
+			display: flex;
+			column-gap: 42px;
+			flex-direction: row;
+			align-items: stretch;
+			max-width: 300px;
+		}
+	}
+	&__left {
+		display: block;
+		position: relative;
+		// flex: 0 0 7px;
+		width: 7px;
+
+		.line-vertical {
+			position: absolute;
+			top: 0;
+			left: 7px;
+			background-color: v.$black;
+			width: 1px;
+			height: 100%;
+		}
+	}
+	&__right {
+		display: flex;
+		// flex: 1 1 auto;
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 10px;
+	}
+}
+
+// xl: 1200px,
+@include m.media-up(xl) {
+	.benefit {
+		padding-top: 126px;
+
+		.title--h2 {
+			margin-top: 6px;
+		}
+		.divider {
+			margin-top: 25px;
+		}
+		.container {
+			max-width: 986px;
+		}
+		&__cards {
+			flex-direction: row;
+			margin-top: 60px;
+
+			&-wrapper {
+				max-width: 425px;
+			}
+		}
+		&__right {
+			gap: 45px;
+		}
+	}
+}
