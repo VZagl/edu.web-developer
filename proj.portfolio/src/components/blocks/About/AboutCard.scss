@@ -33,11 +33,9 @@
 		font-weight: 500;
 		font-size: 12px;
 	}
-}
 
-// xl: 1200px,
-@include m.media-up(xl) {
-	.about__card {
+	// xl: 1200px,
+	@include m.media-up(xl) {
 		width: 260px;
 
 		&__wrapper {

@@ -57,11 +57,9 @@
 		font-weight: 500;
 		font-size: 12px;
 	}
-}
 
-// xl: 1200px,
-@include m.media-up(xl) {
-	.benefit-card {
+	// xl: 1200px,
+	@include m.media-up(xl) {
 		&__text {
 			margin-top: 12px;
 		}

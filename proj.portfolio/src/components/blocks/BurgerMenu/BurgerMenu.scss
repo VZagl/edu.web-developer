@@ -76,11 +76,9 @@
 			height: 20px;
 		}
 	}
-}
 
-// xl: 1200px,
-@include m.media-up(xl) {
-	.burger-menu {
+	// xl: 1200px,
+	@include m.media-up(xl) {
 		&__wrapper {
 			left: -345px;
 			padding-left: 40px;

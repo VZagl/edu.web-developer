@@ -6,11 +6,9 @@
 	color: v.$black;
 	font-weight: 700;
 	font-size: 20px;
-}
 
-// xl: 1200px,
-@include m.media-up(xl) {
-	.benefit-card-header {
+	// xl: 1200px,
+	@include m.media-up(xl) {
 		min-height: auto;
 	}
 }

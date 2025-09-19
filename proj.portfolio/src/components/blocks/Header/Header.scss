@@ -19,11 +19,9 @@
 		gap: 44px;
 		margin-top: 32px;
 	}
-}
 
-// xl: 1200px,
-@include m.media-up(xl) {
-	.header {
+	// xl: 1200px,
+	@include m.media-up(xl) {
 		background: url('assets/img/main_bg.jpg') no-repeat center top;
 		background-position: 50% 10%;
 		background-size: cover;

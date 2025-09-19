@@ -20,11 +20,9 @@
 	&--h3 {
 		font-size: 16px;
 	}
-}
 
-// xl: 1200px,
-@include m.media-up(xl) {
-	.title {
+	// xl: 1200px,
+	@include m.media-up(xl) {
 		&--h1 {
 			font-size: 48px;
 			line-height: 125%;

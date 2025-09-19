@@ -42,11 +42,9 @@
 			height: 20px;
 		}
 	}
-}
 
-// xl: 1200px,
-@include m.media-up(xl) {
-	.sidepanel {
+	// xl: 1200px,
+	@include m.media-up(xl) {
 		display: flex;
 	}
 }

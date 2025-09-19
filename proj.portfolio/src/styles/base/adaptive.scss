@@ -7,25 +7,19 @@
 	margin: 0 auto;
 	padding: 0;
 	max-width: 300px;
-}
 
-// md: 788
-// @include m.media-up(md) {
-// 	.container {
-// 		max-width: 740px;
-// 	}
-// }
+	// md: 788
+	// @include m.media-up(md) {
+	// 	max-width: 740px;
+	// }
 
-// xl: 1200px,
-@include m.media-up(xl) {
-	.container {
+	// xl: 1200px,
+	@include m.media-up(xl) {
 		max-width: 1140px;
 	}
-}
 
-// xxxl: 1920px,
-// @include m.media-up(xxxl) {
-// 	.container {
-// 		max-width: 1520px;
-// 	}
-// }
+	// xxxl: 1920px,
+	// @include m.media-up(xxxl) {
+	// 	max-width: 1520px;
+	// }
+}

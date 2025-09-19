@@ -62,11 +62,9 @@
 		align-items: flex-start;
 		gap: 10px;
 	}
-}
 
-// xl: 1200px,
-@include m.media-up(xl) {
-	.benefit {
+	// xl: 1200px,
+	@include m.media-up(xl) {
 		padding-top: 126px;
 
 		.title--h2 {
