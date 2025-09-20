@@ -49,10 +49,14 @@
 		.line-vertical {
 			position: absolute;
 			top: 0;
-			left: 7px;
+			right: 0;
 			background-color: v.$black;
 			width: 1px;
 			height: 100%;
+		}
+		.circle-small::before {
+			top: 0;
+			left: -1px;
 		}
 	}
 	&__right {
