@@ -11,6 +11,17 @@
 
 	.title--h1 {
 		margin-top: 9px;
+		text-align-last: left;
+	}
+	.title--h3 {
+		margin-top: 0;
+		padding-left: 10px;
+		text-align-last: left;
+
+		&::before {
+			left: 0;
+			transform: none;
+		}
 	}
 	.buttons-wrapper {
 		display: flex;

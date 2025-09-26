@@ -6,10 +6,16 @@
 
 	.title--h2 {
 		margin-top: 26px;
+		text-align: left;
 	}
 	.title--h3 {
-		margin-top: 6px;
 		padding-left: 12px;
+		text-align: left;
+
+		&::before {
+			left: 0;
+			transform: none;
+		}
 	}
 	.divider {
 		margin: 0;
