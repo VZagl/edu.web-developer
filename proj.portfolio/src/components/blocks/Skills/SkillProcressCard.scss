@@ -3,9 +3,7 @@
 
 .skill-progress-card {
 	padding-top: 7px;
-	// padding: 30px 30px 0;
 	width: 100%;
-	// min-height: 70px;
 
 	&__title {
 		display: flex;
@@ -26,7 +24,6 @@
 		.circle-big::before {
 			top: 50%;
 			left: -13px;
-			// left: 50%;
 			transform: translateY(-50%);
 			transform-origin: center;
 		}
