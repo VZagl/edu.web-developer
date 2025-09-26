@@ -1,0 +1,22 @@
+@use 'styles/variables.scss' as v;
+@use 'styles/mixins.scss' as m;
+
+.skill-card {
+	border: 1px solid v.$black;
+	padding: 30px 30px 0;
+	width: 270px;
+	min-height: 270px;
+
+	&__title {
+		margin-top: 20px;
+		color: v.$black;
+		font-weight: 700;
+		font-size: 14px;
+	}
+	&__description {
+		margin-top: 15px;
+		color: v.$black;
+		font-weight: 500;
+		font-size: 12px;
+	}
+}
