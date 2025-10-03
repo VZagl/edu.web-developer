@@ -13,16 +13,24 @@ export function Portfolio() {
 				<div className='divider'></div>
 
 				<div className='portfolio__images'>
-					<img src='assets/img/works/uber.jpg' alt='uber' />
-					<img src='assets/img/works/pulse.jpg' alt='pulse' />
-					<img src='assets/img/works/bread.jpg' alt='bread' />
-					<img
-						src='assets/img/works/plans.jpg'
-						alt='plans'
-						className='grid-2w'
-					/>
-					<img src='assets/img/works/ipad.jpg' alt='ipad' />
-					<img src='assets/img/works/mac.jpg' alt='mac' className='grid-2h' />
+					<a href='#'>
+						<img src='assets/img/works/uber.jpg' alt='uber' />
+					</a>
+					<a href='#'>
+						<img src='assets/img/works/pulse.jpg' alt='pulse' />
+					</a>
+					<a href='#'>
+						<img src='assets/img/works/bread.jpg' alt='bread' />
+					</a>
+					<a href='#' className='grid-2rows'>
+						<img src='assets/img/works/plans.jpg' alt='plans' />
+					</a>
+					<a href='#'>
+						<img src='assets/img/works/ipad.jpg' alt='ipad' />
+					</a>
+					<a href='#' className='grid-2columns'>
+						<img src='assets/img/works/mac.jpg' alt='mac' />
+					</a>
 				</div>
 			</div>
 		</section>
