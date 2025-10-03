@@ -4,6 +4,7 @@
 .circle {
 	&-big {
 		@include m.before_circle(36px);
+		padding: 6px 0;
 	}
 	&-small {
 		@include m.before_circle(15px);

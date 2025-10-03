@@ -10,15 +10,13 @@
 		align-items: center;
 	}
 	.title--h3 {
-		padding: 0;
-
 		&::before {
 			left: 50%;
 			transform: translateX(-50%);
 		}
 	}
 	.title--h2 {
-		margin-top: 26px;
+		margin-top: 20px;
 	}
 	.divider {
 		margin-top: 15px;

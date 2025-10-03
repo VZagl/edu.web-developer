@@ -8,7 +8,7 @@
 		max-width: 281px;
 	}
 	.title--h2 {
-		margin-top: 26px;
+		margin-top: 20px;
 	}
 	.divider {
 		margin-top: 15px;
@@ -31,6 +31,11 @@
 
 	// xl: 1200px,
 	@include m.media-up(xl) {
+		padding-top: 120px;
+
+		.title--h2 {
+			margin-top: 0;
+		}
 		.container {
 			max-width: 1135px;
 		}
@@ -38,9 +43,6 @@
 			grid-template-columns: repeat(4, 280px);
 			gap: 5px;
 
-			img {
-				object-fit: cover;
-			}
 			.grid {
 				&-2h {
 					grid-column: span 2;
