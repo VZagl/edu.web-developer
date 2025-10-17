@@ -1,54 +1,21 @@
 import { Title } from 'components/ui';
+import { prices } from 'data';
 import './PriceList.scss';
-import { PriceListItem } from './PriceListItem';
+import { PriceListColumn } from './PriceListColumn';
 
-const prices = [
-	{
-		id: 1,
-		name: 'Landing-page',
-		price: 8000,
-		description: 'Одностраничный сайт для презентации услуг/товаров/...',
-		pos: { col: 1, row: 1 },
-	},
-	{
-		id: 2,
-		name: 'Корпоративный сайт',
-		price: 20000,
-		description: 'Сайт для вашего бизнеса или компании',
-		pos: { col: 1, row: 2 },
-	},
-	{
-		id: 3,
-		name: 'Интернет-магазин',
-		price: 30000,
-		description: 'Инструмент для ваших продаж в сети',
-		pos: { col: 1, row: 3 },
-	},
-	{
-		id: 4,
-		name: 'Web-приложение',
-		price: 28000,
-		description: 'Приложение внутри браузера для лучшего комфорта',
-		pos: { col: 2, row: 1 },
-	},
-	{
-		id: 5,
-		name: 'Android/IOS Приложение',
-		price: 25000,
-		description: 'Приложение для смартфона любой ОС',
-		pos: { col: 2, row: 2 },
-	},
-	{
-		id: 6,
-		name: 'Дизайн',
-		price: 'Индивидуально',
-		description: 'Создам дизайн для вашего сайта/приложения...',
-		pos: { col: 2, row: 3 },
-	},
-];
-
-export function PriceList() {
+export function PriceList({ columns = 2 }: { columns?: number }) {
 	console.log('## PriceList: render');
+
+	// Нормализуем количество колонок
+	const columnsCount = Math.max(1, Math.floor(columns));
+	const rowPerCol = Math.ceil(prices.length / columnsCount);
+	console.log(
+		'## PriceList: columnsCount=',
+		columnsCount,
+		' rowPerCol=',
+		rowPerCol
+	);
+
 	return (
 		<section className='price-list' id='price-list'>
 			<div className='container'>
@@ -56,11 +23,16 @@ export function PriceList() {
 					Прайс-лист
 				</Title>
 				<div className='divider'></div>
-
 				<div className='price-list__items'>
-					{prices.map((item) => {
-						return <PriceListItem key={item.id} {...item} />;
-					})}
+					{Array.from({ length: columnsCount }).map((_, colIndex) => (
+						<div className='price-list__column' key={colIndex}>
+							<PriceListColumn
+								items={prices}
+								colIndex={colIndex}
+								rowPerCol={rowPerCol}
+							/>
+						</div>
+					))}
 				</div>
 			</div>
 		</section>
