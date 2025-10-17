@@ -50,7 +50,7 @@ export function Contacts() {
 										id='name'
 										type='text'
 										name='name'
-										placeholder='Ваше имя'
+										// placeholder='Ваше имя'
 										required
 									/>
 								</fieldset>
@@ -62,7 +62,7 @@ export function Contacts() {
 										id='email'
 										type='email'
 										name='email'
-										placeholder='Ваша почта'
+										// placeholder='Ваша почта'
 										required
 									/>
 								</fieldset>
@@ -73,15 +73,22 @@ export function Contacts() {
 										className='fset__input'
 										id='question'
 										name='question'
-										placeholder='Ваше сообщение'
+										// placeholder='Ваше сообщение'
 										required
 									></textarea>
 								</fieldset>
 								{/* checkbox */}
-								<fieldset className='fset fset--checkbox grid-2columns'>
+								<fieldset className='fset fset__checkbox grid-2columns'>
 									<input id='checkbox' required type='checkbox' />
 									<span>
-										Я согласен(а) с <a href='#'>политикой конфиденциальности</a>
+										Я согласен(а) с{' '}
+										<a
+											href='/policy.html'
+											target='_blank'
+											rel='noopener noreferrer'
+										>
+											политикой конфиденциальности
+										</a>
 									</span>
 								</fieldset>
 								{/* submit */}

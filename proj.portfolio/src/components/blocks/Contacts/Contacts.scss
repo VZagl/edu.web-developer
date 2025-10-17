@@ -48,14 +48,19 @@
 	}
 	.fset {
 		position: relative;
-		// margin-top: 20px;
 		border: 1px solid v.$black;
 		padding: 0 12px 12px;
+		color: v.$black;
+		font-weight: 500;
+		font-size: 12px;
 
 		&__question {
 			height: 150px;
+			color: v.$black;
+			font-weight: 500;
+			font-size: 12px;
 		}
-		&--checkbox {
+		&__checkbox {
 			display: flex;
 			align-items: center;
 			gap: 10px;
@@ -63,27 +68,29 @@
 			border: none;
 			padding: 0;
 			width: 180px;
-
-			span {
-				font-size: 12px;
-			}
+			color: v.$black;
+			font-weight: 500;
+			font-size: 12px;
 		}
-	}
-	.fset__legend {
-		display: inline-block;
-		position: relative;
-		margin: 0;
-		padding: 0 8px;
-		width: auto;
-		font-weight: 500;
-		font-size: 12px;
-	}
-	.fset__input {
-		margin-left: 8px;
-		outline: none;
-		border: none;
-		width: calc(100% - 8px);
-		font-size: 12px;
+		&__legend {
+			display: inline-block;
+			position: relative;
+			margin: 0;
+			padding: 0 8px;
+			width: auto;
+			color: v.$black;
+			font-weight: 500;
+			font-size: 12px;
+		}
+		&__input {
+			margin-left: 8px;
+			outline: none;
+			border: none;
+			width: calc(100% - 8px);
+			color: v.$black;
+			font-weight: 500;
+			font-size: 12px;
+		}
 	}
 	&__form {
 		margin-top: 20px;
@@ -165,9 +172,9 @@
 			.fset {
 				&__question {
 					// min-height: 199px;
-					height: 160px;
+					height: 165px;
 				}
-				&--checkbox {
+				&__checkbox {
 					margin: 0;
 					// display: none;
 					width: auto;
