@@ -19,6 +19,7 @@
 		font-size: 14px;
 
 		&::before {
+			top: auto;
 			left: -25px;
 			transform: none;
 		}

@@ -17,7 +17,7 @@ export function PriceListItem({
 			<div className='price-list__item-header circle-small'>
 				<h3 className='price-list__item-name'>{name}</h3>
 				<p className='price-list__item-price'>
-					{typeof price === 'number' ? `от ${price} ₽` : price}
+					{typeof price === 'number' ? `от ${price} руб.` : price}
 				</p>
 			</div>
 			<p className='price-list__item-description'>{description}</p>
