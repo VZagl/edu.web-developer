@@ -8,11 +8,9 @@ export function About() {
 		<section className='about' id='about'>
 			<div className='container'>
 				<div className='about__wrapper'>
-					<img
-						src='/assets/img/main_photo.jpg'
-						alt='about photo'
-						className='about__photo'
-					/>
+					<div className='about__photo'>
+						<img src='/assets/img/main_photo.jpg' alt='about photo' />
+					</div>
 					<div className='about__info'>
 						<Title type={3} className='circle-big'>
 							Про меня

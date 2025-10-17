@@ -7,11 +7,9 @@ export function Contacts() {
 		<section className='contacts' id='contakts'>
 			<div className='container'>
 				<div className='contacts__wrapper'>
-					<img
-						src='/assets/img/main_photo.jpg'
-						alt='contacts photo'
-						className='contacts__photo'
-					/>
+					<div className='contacts__photo'>
+						<img src='/assets/img/main_photo.jpg' alt='contacts photo' />
+					</div>
 					<div className='contacts__details'>
 						<Title type={3} className='circle-big'>
 							Контакты
