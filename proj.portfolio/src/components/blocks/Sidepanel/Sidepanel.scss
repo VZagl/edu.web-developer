@@ -12,6 +12,9 @@
 	width: 0px;
 	height: 100vh;
 	pointer-events: auto;
+	color: v.$black;
+	font-weight: 700;
+	font-size: 16px;
 
 	.rotated-wrapper {
 		display: flex;
