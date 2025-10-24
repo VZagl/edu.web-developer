@@ -1,5 +1,5 @@
 @use 'styles/variables.scss' as v;
-@use 'styles/mixins.scss' as m;
+@use 'styles/mixins' as m;
 
 @mixin m_button {
 	display: inline-block;

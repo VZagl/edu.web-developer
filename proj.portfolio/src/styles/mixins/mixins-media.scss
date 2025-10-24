@@ -1,10 +1,10 @@
 @use 'sass:map'; // Импортируем модуль map
 @use 'styles/variables.scss' as v;
 
-// Миксин для media queries - START
 @mixin media-up($breakpoint) {
 	@if map.has-key(v.$breakpoints, $breakpoint) {
 		$value: map.get(v.$breakpoints, $breakpoint);
+
 		@if $value > 0 {
 			@media (min-width: $value) {
 				@content;
@@ -18,6 +18,7 @@
 @mixin media-down($breakpoint) {
 	@if map.has-key(v.$breakpoints, $breakpoint) {
 		$value: map.get(v.$breakpoints, $breakpoint) - 1px;
+
 		@media (max-width: $value) {
 			@content;
 		}
@@ -30,26 +31,5 @@
 
 	@media (min-width: $lower-value) and (max-width: $upper-value) {
 		@content;
-	}
-}
-// Миксин для media queries - END
-
-@mixin before_circle($size: 36px) {
-	position: relative;
-	z-index: 2;
-	// padding-left: 10px;
-
-	&::before {
-		display: block;
-		position: absolute;
-		top: 0;
-		left: 50%;
-		transform: translateX(-50%);
-		z-index: -1;
-		border-radius: 50%;
-		background-color: v.$primary;
-		width: $size;
-		height: $size;
-		content: '';
 	}
 }
