@@ -1,0 +1,12 @@
+@forward 'libs/bootstrap-reboot.min.scss';
+@forward 'styles/base/fonts.scss';
+@forward 'styles/base/common_first.scss';
+@forward 'styles/base/adaptive.scss';
+
+@forward 'styles/ui/circles.scss';
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}

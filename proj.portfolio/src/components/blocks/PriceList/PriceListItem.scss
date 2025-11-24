@@ -1,0 +1,43 @@
+@use 'styles/variables.scss' as v;
+@use 'styles/mixins' as m;
+
+.price-list__item {
+	/* чтобы элемент не ломался между колонками */
+	break-inside: avoid;
+	-webkit-column-break-inside: avoid;
+	display: block;
+	page-break-inside: avoid;
+	padding-left: 25px;
+	width: 100%;
+
+	&-header {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		color: v.$black;
+		font-weight: 700;
+		font-size: 14px;
+
+		&::before {
+			top: auto;
+			left: -25px;
+			transform: none;
+		}
+	}
+	&-name {
+		flex: 1;
+		min-width: 0; /* важно чтобы flex-элемент мог сжиматься корректно */
+		word-break: break-word; /* или overflow-wrap: anywhere; */
+	}
+	&-price {
+		flex-shrink: 0; /* не даём цене сжиматься */
+		margin-left: 10px;
+		white-space: nowrap; /* запрет переноса */
+	}
+	&-description {
+		margin-top: 5px;
+		color: v.$black;
+		font-weight: 500;
+		font-size: 12px;
+	}
+}

@@ -1,0 +1,24 @@
+$white: #ffffff;
+$black: #000000;
+$primary: #ffa501;
+$dark: #151812;
+$grey: #757c84;
+$light-grey: #fafafa;
+$error: #ff4d4f;
+
+// Переменные breakpoints
+$breakpoints: (
+	xs: 320px,
+	// Мобильные (портрет)
+	// sm: 576px,
+	// Мобильные (ландшафт)
+	// md: 788px,
+	// Планшеты
+	// lg: 992px,
+	// Десктопы малые
+	xl: 1200px,
+	// Десктопы большие
+	// xxl: 1530px,
+	// Десктопы очень большие
+	xxxl: 1920px,
+);

@@ -1,0 +1,193 @@
+@use 'styles/variables.scss' as v;
+@use 'styles/mixins' as m;
+
+.contacts {
+	padding: 40px 0 50px;
+
+	&__photo {
+		display: none;
+	}
+	.container {
+		max-width: 302px;
+	}
+	.title--h2 {
+		margin-top: 20px;
+		text-align: left;
+	}
+	.title--h3 {
+		padding-left: 14px;
+		text-align: left;
+
+		&::before {
+			left: 0;
+			transform: none;
+		}
+	}
+	.divider {
+		margin: 15px 0 0;
+	}
+	&__social {
+		margin-top: 20px;
+
+		&-title {
+			color: v.$black;
+			font-weight: 700;
+			font-size: 14px;
+		}
+		&-links {
+			display: flex;
+			align-items: flex-start;
+			gap: 20px;
+			margin-top: 20px;
+
+			img {
+				width: 30px;
+				height: 30px;
+			}
+		}
+	}
+	.fset {
+		position: relative;
+		border: 1px solid v.$black;
+		padding: 0 12px 12px;
+		color: v.$black;
+		font-weight: 500;
+		font-size: 12px;
+
+		&__question {
+			height: 150px;
+			color: v.$black;
+			font-weight: 500;
+			font-size: 12px;
+		}
+		&__checkbox {
+			display: flex;
+			align-items: center;
+			gap: 10px;
+			margin: 20px auto 0;
+			border: none;
+			padding: 0;
+			width: 180px;
+			color: v.$black;
+			font-weight: 500;
+			font-size: 12px;
+		}
+		&__legend {
+			display: inline-block;
+			position: relative;
+			margin: 0;
+			padding: 0 8px;
+			width: auto;
+			color: v.$black;
+			font-weight: 500;
+			font-size: 12px;
+		}
+		&__input {
+			margin-left: 8px;
+			outline: none;
+			border: none;
+			width: calc(100% - 8px);
+			color: v.$black;
+			font-weight: 500;
+			font-size: 12px;
+		}
+	}
+	&__form {
+		margin-top: 20px;
+		color: v.$black;
+
+		form {
+			display: grid;
+			grid-template-columns: repeat(1, 1fr);
+			justify-content: space-between;
+			gap: 20px;
+			margin-top: 20px;
+		}
+		&-title {
+			color: v.$black;
+			font-weight: 700;
+			font-size: 14px;
+		}
+		button {
+			display: block;
+			margin: 20px auto 0;
+		}
+		textarea {
+			min-height: 100%;
+			resize: none;
+		}
+	}
+
+	// xl: 1200px,
+	@include m.media-up(xl) {
+		padding: 120px 0 92px;
+
+		&__wrapper {
+			display: grid;
+			grid-template-columns: auto 585px;
+			justify-content: space-between;
+		}
+		&__photo {
+			display: block;
+			width: 400px;
+			height: 600px;
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		&__details {
+			width: 100%;
+		}
+		.container {
+			padding-left: 17px;
+			max-width: 1070px;
+		}
+		.title--h2 {
+			margin-top: 0;
+		}
+		.title--h3 {
+			margin-top: 0;
+		}
+		.divider {
+			margin-top: 0;
+		}
+		&__social {
+			&-links {
+				gap: 25px;
+			}
+		}
+		&__form {
+			form {
+				display: grid;
+				grid-template-columns: repeat(2, 280px);
+				justify-content: space-between;
+				gap: 21px;
+			}
+			.grid-2columns {
+				grid-column: span 2;
+			}
+			&-title {
+				color: v.$black;
+				font-weight: 700;
+				font-size: 14px;
+			}
+			button {
+				margin: 8px 0 0;
+			}
+			.fset {
+				&__question {
+					// min-height: 199px;
+					height: 165px;
+				}
+				&__checkbox {
+					margin: 0;
+					// display: none;
+					width: auto;
+				}
+			}
+		}
+	}
+}

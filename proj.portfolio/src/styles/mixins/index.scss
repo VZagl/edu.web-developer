@@ -1,0 +1,22 @@
+@forward './mixins-media.scss';
+@use 'styles/variables.scss' as v;
+
+@mixin before_circle($size: 36px) {
+	position: relative;
+	z-index: 2;
+	// padding-left: 10px;
+
+	&::before {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 50%;
+		transform: translateX(-50%);
+		z-index: -1;
+		border-radius: 50%;
+		background-color: v.$primary;
+		width: $size;
+		height: $size;
+		content: '';
+	}
+}

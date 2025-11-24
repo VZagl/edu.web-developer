@@ -1,0 +1,59 @@
+@use 'styles/variables.scss' as v;
+@use 'styles/mixins' as m;
+
+.about__card {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: flex-start;
+	// gap: 20px;
+	width: 260px;
+
+	&-image {
+		position: relative;
+		width: 40px;
+		height: 40px;
+
+		img {
+			display: block;
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+
+		&::before {
+			top: 0;
+		}
+	}
+	&-content {
+		width: 200px;
+	}
+	&-title {
+		color: v.$black;
+		font-weight: 700;
+		font-size: 14px;
+	}
+	&-text {
+		margin-top: 6px;
+		color: v.$black;
+		font-weight: 500;
+		font-size: 12px;
+	}
+
+	// xl: 1200px,
+	@include m.media-up(xl) {
+		width: 260px;
+
+		&__wrapper {
+			flex-direction: row;
+			margin-right: 100px;
+		}
+		&__photo {
+			width: 400px;
+			height: 600px;
+		}
+		&__cards {
+			margin-top: 40px;
+		}
+	}
+}

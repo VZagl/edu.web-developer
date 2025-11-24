@@ -1,0 +1,53 @@
+@use 'styles/variables.scss' as v;
+@use 'styles/mixins' as m;
+
+.sidepanel {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	align-items: center;
+	z-index: 10;
+	padding-left: clamp(0px, calc(((100vw - 1140px) / 2) - 24px) / 2, 50px);
+	width: 0px;
+	height: 100vh;
+	pointer-events: auto;
+	color: v.$black;
+	font-weight: 700;
+	font-size: 16px;
+
+	.rotated-wrapper {
+		display: flex;
+		flex-direction: row;
+		justify-content: center;
+		align-items: center;
+		gap: 15px;
+		transform: translateX(-50%) rotate(-90deg);
+		transform-origin: center top;
+		min-width: 100vh;
+	}
+	.line {
+		display: block;
+		background-color: v.$black;
+		width: 70px;
+		height: 2px;
+	}
+	a {
+		display: inline-flex;
+		justify-content: center;
+		align-items: center;
+		color: inherit;
+		text-decoration: none;
+
+		img {
+			display: block;
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	// xl: 1200px,
+	@include m.media-up(xl) {
+		display: flex;
+	}
+}

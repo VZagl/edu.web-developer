@@ -1,0 +1,41 @@
+@use 'styles/variables.scss' as v;
+@use 'styles/mixins' as m;
+
+.header {
+	display: block;
+	position: relative;
+	background: url('assets/img/mobile_bg.jpg') no-repeat center right;
+	background-size: cover;
+	padding-top: 206px;
+	min-height: 640px;
+
+	.title--h1 {
+		margin-top: 3px;
+		text-align-last: left;
+	}
+	.title--h3 {
+		margin-top: 0;
+		padding-left: 10px;
+		text-align-last: left;
+
+		&::before {
+			left: 0;
+			transform: none;
+		}
+	}
+	.buttons-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 44px;
+		margin-top: 32px;
+	}
+
+	// xl: 1200px,
+	@include m.media-up(xl) {
+		background: url('assets/img/main_bg.jpg') no-repeat center top;
+		background-position: 50% 10%;
+		background-size: cover;
+		min-height: 800px;
+	}
+}

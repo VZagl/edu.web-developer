@@ -1,0 +1,88 @@
+@use 'styles/variables.scss' as v;
+@use 'styles/mixins' as m;
+
+.burger-menu {
+	display: block;
+
+	&__fog {
+		display: block;
+		position: fixed;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		opacity: 0;
+		z-index: 20;
+		backdrop-filter: blur(1px);
+		transition: all 0.5s linear;
+		background-color: rgba(v.$white, 0.75);
+		pointer-events: none;
+
+		&.active {
+			opacity: 1;
+			pointer-events: auto;
+		}
+	}
+	&__wrapper {
+		display: block;
+		position: fixed;
+		top: 0;
+		left: -250px;
+		z-index: 30;
+		transition: all 0.5s ease-in-out;
+		background-color: v.$primary;
+		padding: 25px 25px 50px 20px;
+		width: 250px;
+		height: 100vh;
+
+		&.active {
+			left: 0;
+		}
+	}
+	&__close {
+		cursor: pointer;
+		width: 29px;
+		height: 29px;
+
+		&-wrapper {
+			display: flex;
+			justify-content: flex-end;
+		}
+	}
+	&__nav {
+		margin-top: 87px;
+
+		ul {
+			display: flex;
+			flex-direction: column;
+			gap: 15px;
+			list-style: none;
+		}
+	}
+
+	&__social {
+		display: flex;
+		position: absolute;
+		bottom: 50px;
+		left: 0;
+		justify-content: center;
+		align-items: center;
+		gap: 15px;
+		width: 100%;
+
+		img {
+			cursor: pointer;
+			width: 20px;
+			height: 20px;
+		}
+	}
+
+	// xl: 1200px,
+	@include m.media-up(xl) {
+		&__wrapper {
+			left: -345px;
+			padding-left: 40px;
+			width: 345px;
+		}
+	}
+}

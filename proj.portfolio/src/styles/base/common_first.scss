@@ -1,0 +1,60 @@
+@use 'styles/variables.scss' as v;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+p,
+ol,
+ul {
+	margin: 0;
+}
+
+ol,
+ul {
+	padding-inline: 0;
+	list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	max-height: 100%;
+	object-fit: cover;
+}
+
+html {
+	scroll-behavior: smooth;
+	font-family: 'Barlow', sans-serif;
+}
+
+body {
+	position: relative;
+	background-color: v.$white;
+	color: v.$black;
+}
+
+.scroll-off {
+	overflow: hidden;
+}
+
+.divider {
+	margin: 25px auto 0;
+	background-color: v.$primary;
+	width: 60px;
+	height: 3px;
+}
+// .just-validate-error-label {
+// 	margin-top: 8px;
+// }

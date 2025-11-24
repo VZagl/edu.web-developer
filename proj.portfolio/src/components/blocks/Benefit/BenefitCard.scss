@@ -1,0 +1,68 @@
+@use 'styles/variables.scss' as v;
+@use 'styles/mixins' as m;
+
+.benefit-card {
+	border-left: 1px solid v.$black;
+	// padding-left: 42px;
+
+	&__header {
+		display: flex;
+		position: relative;
+		column-gap: 15px;
+		justify-content: space-between;
+
+		&::before {
+			position: absolute;
+			top: 18px;
+			// left: -50%;
+			transform: translateX(-100%);
+			background-color: v.$black;
+			width: 43px;
+			height: 1px;
+			content: '';
+		}
+	}
+	&__image {
+		position: relative;
+		// flex: 0 0 40px;
+		width: 40px;
+		height: 40px;
+
+		&::before {
+			top: 0;
+			left: 0;
+			transform: none;
+		}
+		img {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+	}
+	&__info {
+		flex: 1 1 auto;
+	}
+	&__title {
+		color: v.$black;
+		font-weight: 700;
+		font-size: 14px;
+	}
+	&__subtitle {
+		color: v.$black;
+		font-weight: 500;
+		font-size: 12px;
+	}
+	&__text {
+		margin-top: 10px;
+		color: v.$black;
+		font-weight: 500;
+		font-size: 12px;
+	}
+
+	// xl: 1200px,
+	@include m.media-up(xl) {
+		&__text {
+			margin-top: 12px;
+		}
+	}
+}
