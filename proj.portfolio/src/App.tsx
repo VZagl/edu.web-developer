@@ -7,8 +7,7 @@ export function App() {
 		const applyRoot = () => {
 			const desiredMm = 10; // 1rem = 10 mm
 			const mmPerIn = 25.4;
-			const dpr = window.devicePixelRatio || 1;
-			const cssPxPerIn = 96 * dpr; // оценка
+			const cssPxPerIn = 96; // CSS reference pixel — константа
 			const pxPerMm = cssPxPerIn / mmPerIn;
 			let rootPx = Math.round(pxPerMm * desiredMm);
 
@@ -21,15 +20,7 @@ export function App() {
 				rootPx + 'px'
 			);
 
-			console.debug('window.devicePixelRatio:', window.devicePixelRatio);
-			console.debug(
-				'devicePixelRatio:',
-				dpr,
-				'rootPx:',
-				rootPx,
-				'estDPI:',
-				cssPxPerIn
-			);
+			console.debug('rootPx:', rootPx, '(target: 1rem = 10 mm)');
 		};
 
 		applyRoot();
