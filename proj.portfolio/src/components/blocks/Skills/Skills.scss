@@ -31,9 +31,9 @@
 			margin-top: 25px;
 		}
 		&__cards {
-			grid-template-columns: repeat(4, 270px);
-			row-gap: 13px;
+			grid-template-columns: repeat(auto-fit, 270px);
 			justify-content: space-between;
+			gap: 13px;
 			margin-top: 60px;
 			padding: 0 10px;
 		}
